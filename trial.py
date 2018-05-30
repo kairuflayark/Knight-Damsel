@@ -15,7 +15,7 @@ while not done:
 		onePress = True
 	if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and onePress:
 		onePress = False
-		if isBlue: isBlue = not is_blue
+		if isBlue: isBlue = not isBlue
 		else: isBlue = True
 	if isBlue: color = (0, 128, 255)
 	else: color = (255, 100, 0)
