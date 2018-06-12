@@ -25,4 +25,5 @@ while run:
     
     #if event.
 
+pygame.quit()
 
