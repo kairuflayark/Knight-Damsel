@@ -2,10 +2,10 @@ import pygame
 
 #!!!! Priority write assignments !!!!
 
-#import knightStory
-#import knightEvents
-#import knightGraphics
-#import knightDungen
+#import knightStory    #Stores story nodes to be called
+#import knightEvents   #Stores game events
+#import knightGraphics #Stores the graphics system, handles sprites
+#import knightDungen   #Procedural room/dungen generation system
 
 pygame.init()
 screen = pygame.display.set_mode((800,600))
