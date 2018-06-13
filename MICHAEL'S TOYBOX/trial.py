@@ -1,7 +1,13 @@
+import sys
 import pygame
 
 pygame.init()
-screen = pygame.display.set_mode((800, 600))
+
+WIDTH = 800
+HEIGHT = 600
+
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
 done = False
 onePress = True
 
@@ -24,5 +30,5 @@ while not done:
 	#draws a rectangle
 	#pygame.draw.rect([argument], [rgb argument], {shape([x1], [y1], [x2], [y2]))
 	pygame.draw.rect(screen, color, pygame.Rect(30, 30, 60, 60))
-	
+
 	pygame.display.flip()
