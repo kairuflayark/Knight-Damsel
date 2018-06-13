@@ -1,13 +1,15 @@
 import pygame
 
+#!!!! Priority write assignments !!!!
+
+#import knightStory
+#import knightEvents
+#import knightGraphics
+#import knightDungen
 
 pygame.init()
 screen = pygame.display.set_mode((800,600))
 run = True
-#def quit(e): #optional event registration method
-#    global run
-#    run = False
-#events.register(pygame.QUIT, quit)
 
 clock = pygame.Clock()
 
