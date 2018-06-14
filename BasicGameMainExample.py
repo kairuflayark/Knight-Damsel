@@ -12,7 +12,7 @@ run = True
 clock = pygame.Clock()
 
 while run:
-    clock.tick(30)//30 FPS
+    clock.tick(30)#30 FPS
 
     #Events First
     for event in pygame.event.get():
