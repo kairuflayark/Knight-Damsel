@@ -67,12 +67,12 @@ def BuildDungeon():
     rooms = dungeonRooms[0][0]
     tile = rooms[0][0]
 
-#    for rRow in range(len(dungeonRooms)):
-#        for rCol in range(len(dungeonRooms[rRow])):
-#            room = dungeonRooms[rRow][rCol]
-#           for tRow in range(len(room)):
-#                for tCol in range(len(room[tRow])):
-#                    rooms.append(room[tRow][tCol])
+    for rRow in range(len(dungeonRooms)):
+        for rCol in range(len(dungeonRooms[rRow])):
+            room = dungeonRooms[rRow][rCol]
+            for tRow in range(len(room)):
+                for tCol in range(len(room[tRow])):
+                    rooms.append(room[tRow][tCol])
     return rooms
 
-BuildDungeon()
+#BuildDungeon()
