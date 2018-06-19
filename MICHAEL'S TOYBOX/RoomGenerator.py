@@ -3,7 +3,7 @@ import sys
 import pygame
 
 import RoomRandomizer
-
+import DungeonRoomRandomizer
 
 
 #CONSTANTS
@@ -38,9 +38,11 @@ done = False
 
 #Create a randomized room of at least 4 tiles
 #note: parameter must be between 4 and 9
-RoomRandomizer.buildRoom(4)
+
+	#RoomRandomizer.buildRoom(4)
+
 #buildRoom randomizes the variable "RoomRandomizer.room"
-room = RoomRandomizer.room
+room = DungeonRoomRandomizer.BuildDungeon()
 
 #Map new room value to tile values
 for row in range(len(room)):
@@ -48,7 +50,6 @@ for row in range(len(room)):
 		if room[row][column] == 0: room[row][column] = X
 		else: room[row][column] = O
 tilemap = room
-
 
 
 #INITIALIZATION
