@@ -40,3 +40,4 @@ def buildRoom(minTiles):
             for c in range(len(room[r])):
                 if room[r][c] == 1:
                     tilect += 1
+
