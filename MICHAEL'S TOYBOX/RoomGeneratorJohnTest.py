@@ -21,16 +21,41 @@ colors = {
     O: BROWN,
 }
 
-defaultRoom = [
+defaultRoom1 = [
     [X, X, X, X, X],
-    [X, O, O, O, X],
-    [X, O, O, O, X],
+    [X, O, O, X, X],
+    [X, X, O, X, X],
     [X, O, O, O, X],
     [X, X, X, X, X]
 ]
+
+defaultRoom2 = [
+    [X, X, X, X, X],
+    [X, O, X, O, X],
+    [X, O, X, O, X],
+    [X, O, X, O, X],
+    [X, X, X, X, X]
+]
+
+defaultRoom3 = [
+    [X, X, X, X, X],
+    [X, O, O, O, X],
+    [X, X, O, O, X],
+    [X, O, O, O, X],
+    [X, X, X, X, X]
+]
+
+defaultRoom4 = [
+    [X, X, X, X, X],
+    [X, O, X, O, X],
+    [X, O, O, O, X],
+    [X, X, X, O, X],
+    [X, X, X, X, X]
+]
+
 defaultMap = [
-    [defaultRoom, defaultRoom],
-    [defaultRoom, defaultRoom]
+    [defaultRoom1, defaultRoom2],
+    [defaultRoom3, defaultRoom4]
 ]
 
 #INITIALIZATION
@@ -47,7 +72,6 @@ while True:
     xRoomOffset = 0
     yRoomOffset = 0
     for roomRow in defaultMap:
-        
         for room in roomRow:
             for tileRow in range(RoomHeight):
                 for tileCol in range(RoomWidth):
@@ -56,9 +80,9 @@ while True:
                     xOffset = (tileCol * TILESIZE)
                     yOffset = (tileRow * TILESIZE)
                     pygame.draw.rect(screen, colors[room[tileRow][tileCol]], (xOffset + xRoomOffset, yOffset + yRoomOffset, TILESIZE, TILESIZE))
-            yRoomOffset += TILESIZE * 5#len(RoomHeight)
-        xRoomOffset += TILESIZE * 5#len(RoomWidth)
-        yRoomOffset = 0
+            xRoomOffset += TILESIZE * 5#len(RoomHeight)
+        yRoomOffset += TILESIZE * 5#len(RoomWidth)
+        xRoomOffset = 0
     pygame.display.flip()
 
 

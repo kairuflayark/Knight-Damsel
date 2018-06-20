@@ -56,9 +56,9 @@ while True:
                     xOffset = (tileCol * TILESIZE)
                     yOffset = (tileRow * TILESIZE)
                     pygame.draw.rect(screen, colors[room[tileRow][tileCol]], (xOffset + xRoomOffset, yOffset + yRoomOffset, TILESIZE, TILESIZE))
-            yRoomOffset += TILESIZE * 5#len(RoomHeight)
-        xRoomOffset += TILESIZE * 5#len(RoomWidth)
-        yRoomOffset = 0
+            xRoomOffset += TILESIZE * 5#len(RoomHeight)
+        yRoomOffset += TILESIZE * 5#len(RoomWidth)
+        xRoomOffset = 0
     pygame.display.flip()
 
 
