@@ -7,12 +7,13 @@ emptyRoom = RoomRandomizer.room
 
 def BDRand():
     randomInt = random.randint(0, 10)
+    print(randomInt)
     if randomInt > 4:
-        room = RoomRandomizer.buildRoom(4)
+        RoomRandomizer.buildRoom(4)
+        room = RoomRandomizer.room
     else:
         room = emptyRoom
     return room
-
 
 def MixDungeon():
     dungeonRooms = [
@@ -48,7 +49,10 @@ def MixDungeon():
 #                    if rRow +1 == emptyRoom:#RIGHT
 #                        paths -= 1
 #            if paths <= 0:
+<<<<<<< HEAD
 #                print("Nontraversable map generated")
+=======
+>>>>>>> b06a4e360d74c2f3b6022c114aa0981105ea53d2
 #                traversable = False
 #            if traversable == False:
 #                break
