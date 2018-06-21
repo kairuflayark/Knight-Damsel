@@ -17,11 +17,14 @@ emptyRoom = [#So we always have this to reference
 ]
 
 def buildRoom(minTiles):
+    global emptyRoom
+    global room
     tilect = 0
     if minTiles > 9: minTiles = 9
     if minTiles < 4: minTiles = 4
 
     while tilect <= minTiles:
+        room = emptyRoom
         tilect = 0
         #randomizes only the middle tiles
         for r in range(len(room)):
@@ -48,4 +51,5 @@ def buildRoom(minTiles):
             for c in range(len(room[r])):
                 if room[r][c] == 1:
                     tilect += 1
+    return room
 
