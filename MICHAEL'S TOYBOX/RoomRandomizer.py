@@ -8,6 +8,14 @@ room = [
     [0, 0, 0, 0, 0]
 ]
 
+emptyRoom = [#So we always have this to reference
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0]
+]
+
 def buildRoom(minTiles):
     tilect = 0
     if minTiles > 9: minTiles = 9
