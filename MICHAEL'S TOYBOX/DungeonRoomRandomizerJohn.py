@@ -1,14 +1,14 @@
-import RoomRandomizer
+import RoomRandomizerJohn
 import random
 
 #4x4 array of rooms
 
-emptyRoom = RoomRandomizer.room
+emptyRoom = RoomRandomizerJohn.emptyRoom
 
 def BDRand():
     randomInt = random.randint(0, 10)
     if randomInt > 4:
-        room = RoomRandomizer.buildRoom(4)
+        room = RoomRandomizerJohn.ConvertedBuildRoom()
     else:
         room = emptyRoom
     return room

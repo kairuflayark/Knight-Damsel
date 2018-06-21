@@ -1,5 +1,7 @@
 import sys
 import pygame
+import RoomRandomizerJohn
+import DungeonRoomRandomizerJohn
 
 TILESIZE = 40	#pixel size (width x height) of each tile
 MAPWIDTH = 5	#number of columns in the tilemap
@@ -58,6 +60,11 @@ defaultMap = [
     [defaultRoom3, defaultRoom4]
 ]
 
+print("Default initialized")
+
+testMap = DungeonRoomRandomizerJohn.MixDungeon()
+print("Non-Default initialized")
+
 #INITIALIZATION
 pygame.init()
 screen = pygame.display.set_mode((MAPWIDTH*RoomWidth*TILESIZE, MAPHEIGHT*RoomWidth*TILESIZE))
@@ -69,9 +76,14 @@ while True:
             pygame.quit()
             sys.exit()
 
+    #Physics
+
+
+    #Rendering
+    
     xRoomOffset = 0
     yRoomOffset = 0
-    for roomRow in defaultMap:
+    for roomRow in testMap:
         for room in roomRow:
             for tileRow in range(RoomHeight):
                 for tileCol in range(RoomWidth):
