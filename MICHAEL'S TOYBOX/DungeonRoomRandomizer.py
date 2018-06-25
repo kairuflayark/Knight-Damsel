@@ -19,8 +19,8 @@ def BDRand():
 def drawPath(direction, dunRoom):
     if direction == "up":
         dunRoom[2][2] = 1
-        dunRoom[2][1] = 1#EDIT THIS TO MAKE BRIDGES
-        dunRoom[2][0] = 1
+        dunRoom[2][2] = 1#EDIT THIS TO MAKE BRIDGES
+        dunRoom[2][2] = 1
     if direction == "down":
         dunRoom[2][2] = 1
         dunRoom[2][2] = 1
@@ -42,43 +42,52 @@ def MixDungeon():
         [BDRand(), BDRand(), BDRand(), BDRand()],
         [BDRand(), BDRand(), BDRand(), BDRand()]
     ]
-    traversable = False
+    return dungeonRooms
+"""    traversable = False
     while(traversable == False):
         traversable = True
         paths = 4
         for rRow in range(len(dungeonRooms)):
-            for rCol in range(len(dungeonRooms[rRow])):
+            for rCol in range(len(dungeonRooms[rRow])):#UP
                 if rCol == 0:
                     paths -= 1
+                    print("bad up")
                 else:
-                    if rCol -1 == emptyRoom:#UP
+                    if rCol -1 == emptyRoom:
                         paths -= 1
+                        print("bad up")
                     else:
                         drawPath("up", dungeonRooms[rRow][rCol])
-                if rCol == len(dungeonRooms[rCol]):
+                if rCol == len(dungeonRooms[rCol]):#DOWN
                     paths -= 1
+                    print("bad down")
                 else:
-                    if rCol +1 == emptyRoom:#DOWN
+                    if rCol +1 == emptyRoom:
                         paths -= 1
+                        print("bad down")
                     else:
                         drawPath("down", dungeonRooms[rRow][rCol])
-                if rRow == 0:
+                if rRow == 0:#LEFT
                     paths -= 1
+                    print("bad left")
                 else:
-                    if rRow -1 == emptyRoom:#LEFT
+                    if rRow -1 == emptyRoom:
                         paths -= 1
+                        print("bad left")
                     else:
                         drawPath("left", dungeonRooms[rRow][rCol])
-                if rRow == len(dungeonRooms[rRow]):
+                if rRow == len(dungeonRooms[rRow]):#RIGHT
                     paths -= 1
+                    print("bad right")
                 else:
-                    if rRow +1 == emptyRoom:#RIGHT
+                    if rRow +1 == emptyRoom:
                         paths -= 1
+                        print("bad right")
                     else:
                         drawPath("right", dungeonRooms[rRow][rCol])
             if paths <= 0:
                 print("Nontraversable map generated")
-                traversable = False
+                #traversable = False
             if traversable == False:
                 break
         if traversable == False:#reshuffle
@@ -87,8 +96,8 @@ def MixDungeon():
                 [BDRand(), BDRand(), BDRand(), BDRand()],
                 [BDRand(), BDRand(), BDRand(), BDRand()],
                 [BDRand(), BDRand(), BDRand(), BDRand()]
-            ]
-    return dungeonRooms
+            ]"""
+    #return dungeonRooms
 
 def BuildDungeon():
     dungeonRooms = MixDungeon()
