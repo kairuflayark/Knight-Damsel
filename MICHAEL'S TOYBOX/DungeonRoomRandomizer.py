@@ -1,11 +1,23 @@
-import RoomRandomizer
+#import RoomRandomizer
 import random,time
 
 #4x4 array of rooms
 
-emptyRoom = RoomRandomizer.emptyRoom
+emptyRoom = [
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0]
+]
 
-stdRoom = RoomRandomizer.room
+stdRoom = [
+    [0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 0],
+    [0, 1, 1, 1, 0],
+    [0, 1, 1, 1, 0],
+    [0, 0, 0, 0, 0]
+]
 
 startRoom = [
     [0, 0, 0, 0, 0],
@@ -16,24 +28,12 @@ startRoom = [
 ]
 
 pathRoom = [
-    [0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0],
     [0, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1],
     [0, 1, 1, 1, 0],
-    [0, 1, 1, 1, 0],
-    [0, 0, 0, 0, 0]
+    [0, 0, 1, 0, 0]
 ]
-
-def BDRand():
-    global emptyRoom
-    newRoom = []
-    randomInt = random.randint(0, 10)
-    print(randomInt)
-    if randomInt > 4:
-        newRoom = RoomRandomizer.buildRoom(4)
-        return RoomRandomizer.room
-    else:
-        return emptyRoom
-    #return RoomRandomizer.room
 
 def drawPath(direction, dunRoom):
     if direction == "up":
@@ -55,19 +55,16 @@ def drawPath(direction, dunRoom):
 
 
 def MixDungeon():
-    global startRoom
-    global dungeonRooms
-    global connections
     dungeonRooms = [[],[],[],[],[]]
     #minTiles = 4
     for i in range(5):
         for j in range(5):
             randomInt = random.randint(0, 10)
             if j == 2 and i == 4:
-                dungeonRooms[i].append(RoomRandomizer.room)   #startRoom
+                dungeonRooms[i].append(stdRoom)   #startRoom
             else:
                 if randomInt > 4:
-                    dungeonRooms[i].append(RoomRandomizer.room)    #standard room
+                    dungeonRooms[i].append(stdRoom)    #standard room
                 else:
                     dungeonRooms[i].append(emptyRoom)   #empty room
 
@@ -77,31 +74,33 @@ def MixDungeon():
     #CODE FOR DRAWING PATHS
     for i in range(len(dungeonRooms)):#j=lr i=ud
         for j in range(len(dungeonRooms[i])):
+            pyRoom = stdRoom
             if dungeonRooms[i][j][2][2] == 1: #if there IS a room here
                 connections = 0
                 if (i - 1) >= 0: #up
                     if dungeonRooms[i-1][j][2][2] == 1:
-                        dungeonRooms[i][j][0][2] = 1
-                        dungeonRooms[i][j][1][2] = 1
+                        pyRoom[0][2] = 1
+                        pyRoom[1][2] = 1
                         connections += 1
                 if (i + 1) <= 4: #down
                     if dungeonRooms[i+1][j][2][2] == 1:
-                        dungeonRooms[i][j][3][2] = 1
-                        dungeonRooms[i][j][4][2] = 1
+                        pyRoom[3][2] = 1
+                        pyRoom[4][2] = 1
                         connections += 1
                 if (j - 1) >= 0: #left
                     if dungeonRooms[i][j-1][2][2] == 1:
-                        dungeonRooms[i][j][2][0] = 1
-                        dungeonRooms[i][j][2][1] = 1
+                        pyRoom[2][0] = 1
+                        pyRoom[2][1] = 1
                         connections += 1
                 if (j + 1) <= 4: #right
                     if dungeonRooms[i][j+1][2][2] == 1:
-                        dungeonRooms[i][j][2][3] = 1
-                        dungeonRooms[i][j][2][4] = 1
+                        pyRoom[2][3] = 1
+                        pyRoom[2][4] = 1
                         connections += 1
                 if connections < 1:
                     dungeonRooms[i][j] = emptyRoom
-                connections = 0
+                if connections > 1:
+                    dungeonRooms[i][j] = pyRoom
 
     return dungeonRooms
 
