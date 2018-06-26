@@ -5,15 +5,24 @@ import random
 
 emptyRoom = RoomRandomizer.emptyRoom
 
+startRoom = [
+    [0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 0],
+    [1, 1, 1, 1, 0],
+    [0, 1, 1, 1, 0],
+    [0, 0, 0, 0, 0]
+]
+
 def BDRand():
     global emptyRoom
+    newRoom = []
     randomInt = random.randint(0, 10)
     print(randomInt)
     if randomInt > 4:
-        RoomRandomizer.buildRoom(4)
-        newRoom = RoomRandomizer.room
+        newRoom = RoomRandomizer.buildRoom(4)
+        #newRoom = RoomRandomizer.room
     else:
-        newRoom = emptyRoom
+        return emptyRoom
     return newRoom
 
 def drawPath(direction, dunRoom):
@@ -36,8 +45,9 @@ def drawPath(direction, dunRoom):
 
 
 def MixDungeon():
+    global startRoom
     dungeonRooms = [
-        [BDRand(), BDRand(), BDRand(), BDRand()],
+        [startRoom, BDRand(), BDRand(), BDRand()],
         [BDRand(), BDRand(), BDRand(), BDRand()],
         [BDRand(), BDRand(), BDRand(), BDRand()],
         [BDRand(), BDRand(), BDRand(), BDRand()]
@@ -92,7 +102,7 @@ def MixDungeon():
                 break
         if traversable == False:#reshuffle
             dungeonRooms = [
-                [BDRand(), BDRand(), BDRand(), BDRand()],
+                [startRoom, BDRand(), BDRand(), BDRand()],
                 [BDRand(), BDRand(), BDRand(), BDRand()],
                 [BDRand(), BDRand(), BDRand(), BDRand()],
                 [BDRand(), BDRand(), BDRand(), BDRand()]
