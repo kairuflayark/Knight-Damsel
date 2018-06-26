@@ -5,6 +5,8 @@ import random,time
 
 emptyRoom = RoomRandomizer.emptyRoom
 
+stdRoom = RoomRandomizer.room
+
 startRoom = [
     [0, 0, 0, 0, 0],
     [0, 1, 1, 1, 0],
@@ -14,11 +16,11 @@ startRoom = [
 ]
 
 pathRoom = [
-    [0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0],
     [0, 1, 1, 1, 0],
-    [1, 1, 1, 1, 1],
     [0, 1, 1, 1, 0],
-    [0, 0, 1, 0, 0]
+    [0, 1, 1, 1, 0],
+    [0, 0, 0, 0, 0]
 ]
 
 def BDRand():
@@ -61,43 +63,47 @@ def MixDungeon():
         for j in range(5):
             randomInt = random.randint(0, 10)
             if j == 2 and i == 4:
-                dungeonRooms[i].append(pathRoom)   #startRoom
+                dungeonRooms[i].append(RoomRandomizer.room)   #startRoom
             else:
                 if randomInt > 4:
-                    dungeonRooms[i].append(pathRoom)    #standard room
+                    dungeonRooms[i].append(RoomRandomizer.room)    #standard room
                 else:
                     dungeonRooms[i].append(emptyRoom)   #empty room
 
+#    return dungeonRooms
+
+
     #CODE FOR DRAWING PATHS
-    for i in dungeonRooms:#j=lr i=ud
-        for j in dungeonRooms[i]:
+    for i in range(len(dungeonRooms)):#j=lr i=ud
+        for j in range(len(dungeonRooms[i])):
             #if dungeonRooms[i][j][2][2] == 0: #if there is NO room here
                 #CODE HERE
             if dungeonRooms[i][j][2][2] == 1: #if there IS a room here
-                #CODE HERE
-
-
-
-
+                up = (j - 1)
+                if up < 0: up = 0
+                down = (j + 1)
+                if down > len(dungeonRooms[i])
+                left = (i - 1)
+                right = (i + 1)
 
                 #draw connection paths
                 if j != 0:
-                    if dungenRooms[i][j-1][2][2] == 1:#left
+                    if dungeonRooms[i][j-1][2][2] == 1:#left
                         dungeonRooms[i][j][2][0] = 1
                         dungeonRooms[i][j][2][1] = 1
                 if j != 4:
-                    if dungenRooms[i][j+1][2][2] == 1:#right
+                    if dungeonRooms[i][j+1][2][2] == 1:#right
                         dungeonRooms[i][j][2][3] = 1
                         dungeonRooms[i][j][2][4] = 1
                 if i != 0:
-                    if dungenRooms[i-1][j][2][2] == 1:#up
+                    if dungeonRooms[i-1][j][2][2] == 1:#up
                         dungeonRooms[i][j][0][2] = 1
                         dungeonRooms[i][j][1][2] = 1
                 if i != 4:
-                    if dungenRooms[i+1][j][2][2] == 1:#down
+                    if dungeonRooms[i+1][j][2][2] == 1:#down
                         dungeonRooms[i][j][3][2] = 1
                         dungeonRooms[i][j][4][2] = 1
-                
+
                 
 
     return dungeonRooms
