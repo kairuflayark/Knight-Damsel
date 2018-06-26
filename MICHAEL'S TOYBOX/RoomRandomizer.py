@@ -38,7 +38,7 @@ def buildRoom(minTiles):
         for r in range(len(room)):
             for c in range(len(room[r])):
                 connections = 0
-                if (r != 0 and r != len(room) - 1) and (c != 0 and c != len(room[c]) - 1):
+                if (r != 0 and r != len(room) - 1) and (c != 0 and c != len(room[c]) - 1): #ignore room border
                     if room[r][c] == 1:
                         if room[r - 1][c] == 0 and room[r][c - 1] == 0 and room[r + 1][c] == 0 and room[r][c + 1] == 0:
                             room[r][c] = 0
