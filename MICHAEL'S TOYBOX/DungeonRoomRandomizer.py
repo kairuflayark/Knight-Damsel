@@ -35,23 +35,23 @@ def BDRand():
         return emptyRoom
     #return RoomRandomizer.room
 
-def drawPath(direction, dunRoom):
+def drawPath(direction, dunRoom):#[ud][lr]
     if direction == "up":
         dunRoom[2][2] = 1
-        dunRoom[2][2] = 1#EDIT THIS TO MAKE BRIDGES
-        dunRoom[2][2] = 1
+        dunRoom[1][2] = 1#EDIT THIS TO MAKE BRIDGES
+        dunRoom[0][2] = 1
     if direction == "down":
         dunRoom[2][2] = 1
-        dunRoom[2][2] = 1
-        dunRoom[2][2] = 1
+        dunRoom[3][2] = 1
+        dunRoom[4][2] = 1
     if direction == "left":
         dunRoom[2][2] = 1
-        dunRoom[2][2] = 1
-        dunRoom[2][2] = 1
+        dunRoom[2][1] = 1
+        dunRoom[2][0] = 1
     if direction == "right":
         dunRoom[2][2] = 1
-        dunRoom[2][2] = 1
-        dunRoom[2][2] = 1
+        dunRoom[2][3] = 1
+        dunRoom[2][4] = 1
 
 
 def MixDungeon():
