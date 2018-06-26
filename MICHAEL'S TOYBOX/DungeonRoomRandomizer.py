@@ -74,7 +74,13 @@ def MixDungeon():
     #CODE FOR DRAWING PATHS
     for i in range(len(dungeonRooms)):#j=lr i=ud
         for j in range(len(dungeonRooms[i])):
-            pyRoom = stdRoom
+            pyRoom = [
+                [0, 0, 0, 0, 0],
+                [0, 1, 1, 1, 0],
+                [0, 1, 1, 1, 0],
+                [0, 1, 1, 1, 0],
+                [0, 0, 0, 0, 0]
+            ]
             if dungeonRooms[i][j][2][2] == 1: #if there IS a room here
                 connections = 0
                 if (i - 1) >= 0: #up
