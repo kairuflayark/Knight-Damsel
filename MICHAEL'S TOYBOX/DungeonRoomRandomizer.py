@@ -57,6 +57,7 @@ def drawPath(direction, dunRoom):
 def MixDungeon():
     global startRoom
     global dungeonRooms
+    global connections
     dungeonRooms = [[],[],[],[],[]]
     #minTiles = 4
     for i in range(5):
@@ -76,15 +77,24 @@ def MixDungeon():
     #CODE FOR DRAWING PATHS
     for i in range(len(dungeonRooms)):#j=lr i=ud
         for j in range(len(dungeonRooms[i])):
-            #if dungeonRooms[i][j][2][2] == 0: #if there is NO room here
-                #CODE HERE
             if dungeonRooms[i][j][2][2] == 1: #if there IS a room here
-                up = (j - 1)
-                if up < 0: up = 0
-                down = (j + 1)
-                if down > len(dungeonRooms[i])
-                left = (i - 1)
-                right = (i + 1)
+                connections = 0
+                if (i - 1) >= 0: #up
+                    if dungeonRooms[i-1][j][2][2] == 1:
+
+                        connections += 1
+                if (i + 1) <= 4: #down
+                    if dungeonRooms[i+1][j][2][2] == 1:
+                        connections += 1
+                if (j - 1) >= 0: #left
+                    if dungeonRooms[i][j-1][2][2] == 1:
+                        connections += 1
+                if (j + 1) <= 4: #right
+                    if dungeonRooms[i][j+1][2][2] == 1:
+                        connections += 1
+                if connections < 1:
+                    dungeonRooms[i][j] = emptyRoom
+                connections = 0
 
                 #draw connection paths
                 if j != 0:
@@ -103,8 +113,6 @@ def MixDungeon():
                     if dungeonRooms[i+1][j][2][2] == 1:#down
                         dungeonRooms[i][j][3][2] = 1
                         dungeonRooms[i][j][4][2] = 1
-
-                
 
     return dungeonRooms
 
