@@ -1,5 +1,5 @@
 import RoomRandomizer
-import random
+import random,time
 
 #4x4 array of rooms
 
@@ -8,9 +8,17 @@ emptyRoom = RoomRandomizer.emptyRoom
 startRoom = [
     [0, 0, 0, 0, 0],
     [0, 1, 1, 1, 0],
-    [1, 1, 1, 1, 0],
     [0, 1, 1, 1, 0],
-    [0, 0, 0, 0, 0]
+    [0, 1, 1, 1, 0],
+    [0, 0, 1, 0, 0]
+]
+
+pathRoom = [
+    [0, 0, 1, 0, 0],
+    [0, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1],
+    [0, 1, 1, 1, 0],
+    [0, 0, 1, 0, 0]
 ]
 
 def BDRand():
@@ -20,10 +28,10 @@ def BDRand():
     print(randomInt)
     if randomInt > 4:
         newRoom = RoomRandomizer.buildRoom(4)
-        #newRoom = RoomRandomizer.room
+        return RoomRandomizer.room
     else:
         return emptyRoom
-    return newRoom
+    #return RoomRandomizer.room
 
 def drawPath(direction, dunRoom):
     if direction == "up":
@@ -46,13 +54,30 @@ def drawPath(direction, dunRoom):
 
 def MixDungeon():
     global startRoom
-    dungeonRooms = [
-        [startRoom, BDRand(), BDRand(), BDRand()],
-        [BDRand(), BDRand(), BDRand(), BDRand()],
-        [BDRand(), BDRand(), BDRand(), BDRand()],
-        [BDRand(), BDRand(), BDRand(), BDRand()]
-    ]
+    global dungeonRooms
+    dungeonRooms = [[],[],[],[],[]]
+    #minTiles = 4
+    for i in range(5):
+        for j in range(5):
+            randomInt = random.randint(0, 10)
+            if j == 2 and i == 4:
+                dungeonRooms[i].append(pathRoom)   #startRoom
+            else:
+                if randomInt > 4:
+                    dungeonRooms[i].append(pathRoom)    #standard room
+                else:
+                    dungeonRooms[i].append(emptyRoom)   #empty room
+
+    #CODE FOR DRAWING PATHS
+    for i in dungeonRooms:
+        for j in dungeonRooms[i]:
+            if dungeonRooms[i][j][2][2] == 0: #if there is NO room here
+                #CODE HERE
+            if dungeonRooms[i][j][2][2] == 1: #if there IS a room here
+                #CODE HERE
+
     return dungeonRooms
+
 """    traversable = False
     while(traversable == False):
         traversable = True
@@ -108,20 +133,3 @@ def MixDungeon():
                 [BDRand(), BDRand(), BDRand(), BDRand()]
             ]"""
     #return dungeonRooms
-
-def BuildDungeon():
-    dungeonRooms = MixDungeon()
-    rooms = []
-
-    rooms = dungeonRooms[0][0]
-    tile = rooms[0][0]
-
-    for rRow in range(len(dungeonRooms)):
-        for rCol in range(len(dungeonRooms[rRow])):
-            room = dungeonRooms[rRow][rCol]
-            for tRow in range(len(room)):
-                for tCol in range(len(room[tRow])):
-                    rooms.append(room[tRow][tCol])
-    return rooms
-
-#BuildDungeon()

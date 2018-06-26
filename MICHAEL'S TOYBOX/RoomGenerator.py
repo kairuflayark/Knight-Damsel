@@ -6,8 +6,8 @@ import DungeonRoomRandomizer
 TILESIZE = 40	#pixel size (width x height) of each tile
 MAPWIDTH = 5	#number of columns in the tilemap
 MAPHEIGHT = 5	#number of rows in the tilemap
-RoomHeight = 4
-RoomWidth = 4
+RoomHeight = 5
+RoomWidth = 5
 
 #colors
 BLACK = (0, 0, 0)
@@ -51,12 +51,9 @@ while True:
     xRoomOffset = 0
     yRoomOffset = 0
     for roomRow in defaultMap:
-        
         for room in roomRow:
             for tileRow in range(RoomHeight):
                 for tileCol in range(RoomWidth):
-                    #xOffset = (tileCol * TILESIZE)
-                    #yOffset = (tileRow * TILESIZE)
                     xOffset = (tileCol * TILESIZE)
                     yOffset = (tileRow * TILESIZE)
                     pygame.draw.rect(screen, colors[room[tileRow][tileCol]], (xOffset + xRoomOffset, yOffset + yRoomOffset, TILESIZE, TILESIZE))
