@@ -69,12 +69,36 @@ def MixDungeon():
                     dungeonRooms[i].append(emptyRoom)   #empty room
 
     #CODE FOR DRAWING PATHS
-    for i in dungeonRooms:
+    for i in dungeonRooms:#j=lr i=ud
         for j in dungeonRooms[i]:
-            if dungeonRooms[i][j][2][2] == 0: #if there is NO room here
+            #if dungeonRooms[i][j][2][2] == 0: #if there is NO room here
                 #CODE HERE
             if dungeonRooms[i][j][2][2] == 1: #if there IS a room here
                 #CODE HERE
+
+
+
+
+
+                #draw connection paths
+                if j != 0:
+                    if dungenRooms[i][j-1][2][2] == 1:#left
+                        dungeonRooms[i][j][2][0] = 1
+                        dungeonRooms[i][j][2][1] = 1
+                if j != 4:
+                    if dungenRooms[i][j+1][2][2] == 1:#right
+                        dungeonRooms[i][j][2][3] = 1
+                        dungeonRooms[i][j][2][4] = 1
+                if i != 0:
+                    if dungenRooms[i-1][j][2][2] == 1:#up
+                        dungeonRooms[i][j][0][2] = 1
+                        dungeonRooms[i][j][1][2] = 1
+                if i != 4:
+                    if dungenRooms[i+1][j][2][2] == 1:#down
+                        dungeonRooms[i][j][3][2] = 1
+                        dungeonRooms[i][j][4][2] = 1
+                
+                
 
     return dungeonRooms
 
