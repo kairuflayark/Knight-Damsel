@@ -33,7 +33,7 @@ while run:
     clock.tick(30)
     
     # event handeling first
-    events_test.update():
+    events_test.update()
 
     # game physics second
 

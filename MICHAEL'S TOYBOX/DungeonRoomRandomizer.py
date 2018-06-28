@@ -81,27 +81,50 @@ def MixDungeon():
                 [0, 1, 1, 1, 0],
                 [0, 0, 0, 0, 0]
             ]
+            pyRoom2 = [
+                [0, 0, 0, 0, 0],
+                [0, 1, 1, 1, 0],
+                [0, 1, 1, 1, 0],
+                [0, 1, 1, 1, 0],
+                [0, 0, 0, 0, 0]
+            ]
             if dungeonRooms[i][j][2][2] == 1: #if there IS a room here
                 connections = 0
                 if (i - 1) >= 0: #up
                     if dungeonRooms[i-1][j][2][2] == 1:
                         pyRoom[0][2] = 1
                         pyRoom[1][2] = 1
+                        pyRoom2 = dungeonRooms[i-1][j]
+                        pyRoom2[4][2] = 1
+                        pyRoom2[3][2] = 1
+                        dungeonRooms[i-1][j] = pyRoom2
                         connections += 1
                 if (i + 1) <= 4: #down
                     if dungeonRooms[i+1][j][2][2] == 1:
                         pyRoom[3][2] = 1
                         pyRoom[4][2] = 1
+                        pyRoom2 = dungeonRooms[i+1][j]
+                        pyRoom2[0][2] = 1
+                        pyRoom2[1][2] = 1
+                        dungeonRooms[i+1][j] = pyRoom2
                         connections += 1
                 if (j - 1) >= 0: #left
                     if dungeonRooms[i][j-1][2][2] == 1:
                         pyRoom[2][0] = 1
                         pyRoom[2][1] = 1
+                        pyRoom2 = dungeonRooms[i][j-1]
+                        pyRoom2[2][3] = 1
+                        pyRoom2[2][4] = 1
+                        dungeonRooms[i][j-1] = pyRoom2
                         connections += 1
                 if (j + 1) <= 4: #right
                     if dungeonRooms[i][j+1][2][2] == 1:
                         pyRoom[2][3] = 1
                         pyRoom[2][4] = 1
+                        pyRoom2 = dungeonRooms[i][j+1]
+                        pyRoom2[2][1] = 1
+                        pyRoom2[2][0] = 1
+                        dungeonRooms[i][j+1] = pyRoom2
                         connections += 1
                 if connections < 1:
                     dungeonRooms[i][j] = emptyRoom
