@@ -11,6 +11,8 @@ while not done:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			done = True
+			pygame.quit()
+			sys.exit()
 	if event.type == pygame.KEYUP and event.key == pygame.K_SPACE:
 		onePress = True
 	if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and onePress:

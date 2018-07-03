@@ -1,5 +1,9 @@
-import graphics_test
+
+import os
+
 import pygame
+
+import graphics_test
 
 class Entitiy(object):
     def __init__(self):
@@ -31,8 +35,38 @@ class George(Entity):
         self.frame = self.frames["down"][0]
         self.frame_num = 0
         self.facing = "down"
+        self.speed = 0.5
+        self.velocity = [0,0]
 
     def update(self):
-        self.frame_num = (self.frame_num + 1)%4
+        self.x += self.velocity[0]
+        self.y += self.velocity[1]
+        self.frame_num = (self.frame_num + self.speed * .25)%4
         self.frame =  self.frames[self.facing][self.frame_num]
 
+    def key_handler(self, e):
+        if (e.type == pygame.KEYDOWN):
+            if (e.key == pygame.K_UP):
+                self.velocity[1] -= self.speed
+                self.facing = "up"
+            elif (e.key == pygame.K_DOWN):
+                self.velocity[1] += self.speed
+                self.facing = "down"
+            elif (e.key == pygame.K_LEFT):
+                self.velocity[0] -= self.speed
+                self.facing = "left"
+            elif (e.key == pygame.K_RIGHT):
+                self.velocity[0] += self.speed
+                self.facing = "right"
+            
+        elif (e.type == pygame.KEYUP):
+            if (e.key == pygame.K_UP):
+                self.velocity[1] += self.speed               
+            elif (e.key == pygame.K_DOWN):
+                self.velocity[1] -= self.speed     
+            elif (e.key == pygame.K_LEFT):
+                self.velocity[0] += self.speed 
+            elif (e.key == pygame.K_RIGHT):
+                self.velocity[0] -= self.speed
+                
+            

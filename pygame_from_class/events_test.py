@@ -1,7 +1,11 @@
 import pygame
 
 listeners = {
-    pygame.QUIT: []
+    pygame.QUIT: [],
+    pygame.KEYDOWN: [],
+    pygame.KEYUP: [],
+    #pygame.MOUSEMOTION
+    #pygame.MOUSEBUTTONDOWN/UP
     }
 
 def register(type, handler):
@@ -15,6 +19,6 @@ def update():
     for e in pygame.event.get():
         if e.type in listeners:
             for l in listeners[e.type]:
-                l.(e.type)
+                l.(e)
     
     
