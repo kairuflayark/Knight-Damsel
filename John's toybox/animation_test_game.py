@@ -39,6 +39,7 @@ while run:
     #        run = False
             
     #Physics Second
+    coin.update()
 
     #Rendering Third
     animation_test_graphics.render()

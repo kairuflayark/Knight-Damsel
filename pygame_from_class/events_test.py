@@ -19,6 +19,6 @@ def update():
     for e in pygame.event.get():
         if e.type in listeners:
             for l in listeners[e.type]:
-                l.(e)
+                l(e)
     
     

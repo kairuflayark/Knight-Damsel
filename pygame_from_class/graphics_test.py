@@ -17,7 +17,7 @@ def init(res):
 def add(sprite):
     global sprites
     if sprite not in sprites:
-        sprites.appent(sprite)
+        sprites.append(sprite)
 
 def remove(sprite):
     global sprites

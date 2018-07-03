@@ -22,15 +22,17 @@ def remove(sprite):
     if sprite in sprites:
         sprites.remove(sprite)
         
-        
-def render():
-    global screen, background, sprites
-    screen.fill((0,0,0))
-    screen.blit(background, (0,0))
+def render():	
+    global screen, background
+    screen.fill((0, 0, 0))
+	
+    screen.blit(background, (0, 0))
+	
     for sprite in sprites:
-        screen.blit(sprite.sprite,(sprite.frame))
+        screen.blit(sprite.sprite, (sprite.x, sprite.y), sprite.frame)
+		
+    pygame.display.flip()        
 
-    pygame.display.flip()
     
 def load(path):
     global images
