@@ -23,7 +23,8 @@ class Pane(object):
 
     def addText(self):
         # can display 54 characters / line
-        self.screen.blit(self.font.render('Testing one two three\n The quick brown fox\n Jumped over the lazy dog', True, (255,0,0)), (2, 300))
+        # render ((content, [not sure what True does] (color of font)) (location to start drawing at) 
+        self.screen.blit(self.font.render('Testing one two three', True, (255,0,0)), (2, 300))
         pygame.display.update()
 
 if __name__ == '__main__':
