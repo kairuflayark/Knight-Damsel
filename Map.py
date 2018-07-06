@@ -12,7 +12,7 @@ GOLD = 5
 
 colors = {
     DIRT: pygame.image.load('dirt.png'),
-    GRASS: pygame.image.load('dirt.png'),
+    GRASS: pygame.image.load('grass.png'),
     WATER: pygame.image.load('water.png'),
     COAL: pygame.image.load('dirt.png'),
     STONE: pygame.image.load('stone.png'),
@@ -21,7 +21,7 @@ colors = {
 
 
 tilemap = [
-    [STONE, STONE, STONE, WATER, STONE],
+    [GRASS, GRASS, STONE, WATER, STONE],
     [GOLD, STONE, STONE, WATER, STONE],
     [GOLD, STONE, WATER, WATER, STONE],
     [GOLD, STONE, STONE, STONE, STONE],
