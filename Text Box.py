@@ -16,20 +16,21 @@ class Pane(object):
         pygame.display.update()
 
 
-    def addRect(self):
+    def addText(self):
         # dimensions are X,Y, X2,Y2
         self.rect = pygame.draw.rect(self.screen, black, (0, 300, 600, 400))
         pygame.display.update()
-
-    def addText(self):
         # can display 54 characters / line
-        # render ((content, [not sure what True does] (color of font)) (location to start drawing at) 
-        self.screen.blit(self.font.render('Testing one two three', True, (255,0,0)), (2, 300))
+        text = 'Testing one two three four five six seven eight nine ten'
+        printT = 300
+        printR = 2
+        letterCount = 0
+        # render ((content, [not sure what True does] (color of font)) (location to start drawing at)
+        self.screen.blit(self.font.render('Testing one two three', True, (255,0,0)), (printR, printT))
         pygame.display.update()
 
 if __name__ == '__main__':
     Pan3 = Pane()
-    Pan3.addRect()
     Pan3.addText()
     while True:
         for event in pygame.event.get():
