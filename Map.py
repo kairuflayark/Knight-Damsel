@@ -2,29 +2,27 @@ import pygame
 import sys
 from pygame.locals import *
 
-BLACK = (0, 0, 0)
-BROWN = (153, 76, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
 
 DIRT = 0
 GRASS = 1
 WATER = 2
 COAL = 3
+STONE = 4
 
 colors = {
     DIRT: pygame.image.load('dirt.png'),
     GRASS: pygame.image.load('dirt.png'),
     WATER: pygame.image.load('water.png'),
-    COAL: pygame.image.load('dirt.png')
+    COAL: pygame.image.load('dirt.png'),
+    STONE: pygame.image.load('stone.png')
 }
 
 
 tilemap = [
-    [GRASS, GRASS, GRASS, WATER, GRASS],
-    [DIRT, DIRT, DIRT, WATER, DIRT],
-    [COAL, DIRT, WATER, WATER, DIRT],
-    [DIRT, DIRT, COAL, DIRT, DIRT],
+    [STONE, STONE, STONE, WATER, STONE],
+    [DIRT, STONE, STONE, WATER, STONE],
+    [COAL, STONE, WATER, WATER, STONE],
+    [DIRT, STONE, STONE, STONE, STONE],
     [DIRT, DIRT, DIRT, COAL, COAL]
 ]
 
