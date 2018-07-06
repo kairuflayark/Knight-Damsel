@@ -33,7 +33,7 @@ clock = pygame.time.Clock()
 
 run = True
 while run:
-    clock.tick(10)
+    clock.tick(9)
     events.register(pygame.KEYDOWN, vizzi.key_handler)
     events.register(pygame.KEYUP, vizzi.key_handler)
 

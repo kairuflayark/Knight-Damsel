@@ -41,7 +41,11 @@ class Vizzi(Entity):
     # Change
     def update(self):
         if self.attack:
+
             if self.aFrame == 0:
+                pygame.mixer.init()
+                coin = pygame.mixer.Sound("Thwack.wav")
+                coin.play()
                 self.frame = self.frames["one"][0]
                 self.aFrame = 1
             elif self.aFrame == 1:
