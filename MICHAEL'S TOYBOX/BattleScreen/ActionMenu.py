@@ -40,3 +40,17 @@ ACTION SCREEN
                         a) EXIT Action Screen
 
 """
+
+import pygame
+import sys
+import TextBox
+
+pygame.draw.rect(pygame.display.set_mode((600,400), 0, 32), (0,0,0), (0, 300, 600, 400))
+TextBox.Pane.addRect()
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit();
+            sys.exit();
+
