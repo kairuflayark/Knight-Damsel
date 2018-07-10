@@ -70,6 +70,6 @@ while True:
 
     for row in range(MAPHEIGHT):
         for column in range(MAPWIDTH):
-            DISPLAYSURF.blit(colors[tilemap[row][column]], (column*TILESIZE, row*TILESIZE))
+            DISPLAYSURF.blit(colors[road[row][column]], (column*TILESIZE, row*TILESIZE))
 
         pygame.display.update()

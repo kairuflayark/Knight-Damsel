@@ -9,10 +9,10 @@ class Text(object):
 class King_text():
     def __init__(self):
         self.num_choice = 3
-        self.intro = ["What should I do now?"]
-        self.decision = ["Tell the King",
-                         "Leave a note",
-                         "Leave immediately"]
+        self.intro = [["What should I do now?"]]
+        self.decision = [["Tell the King"],
+                         ["Leave a note"],
+                         ["Leave immediately"]]
         self.result = ["He sends you off with his trust",
                        "With the note written you leave",
                        "Saddling your horse you leave"]
@@ -20,8 +20,8 @@ class King_text():
 class Vizzi_text():
     def __init__(self):
         self.num_choice = 3
-        self.intro = [ "On the way you encounter Vizzi who was",
-                       "running late to kidnap Christine" ]
+        self.intro = [ ["On the way you encounter Vizzi who was"],
+                       ["running late to kidnap Christine"] ]
         self.decision = ["Kill him",
                          "Let him leave",
                          "Leave immediately"]
@@ -34,10 +34,18 @@ class Charles_text():
         self.num_choice = 3
         self.intro = ["As you are considering whether or not to take the",
                       "left door or the right one of your fellow knights arrives"]
-        self.decision = [,
-                         "Leave a note",
-                         "Leave immediately"]
-        self.result = ["He sends you off with his trust",
-                       "With the note written you leave",
-                       "Saddling your horse you leave"]
+        self.decision = ["Stab him in the back",
+                         "Try and convince him to leave",
+                         "Make it into a competition"]
+        self.result = ["He falls and his body lies resting on the floor",
+                       "With a mighty clash of swords he collapses bloodied and exhausted",
+                       "He agrees and tells you to choose which door to go through"]
 
+class Door_text():
+    def __init__(self):
+        self.num_choice = 2
+        self.intro = [ "Left or straight?" ]
+        self.decision = ["Left",
+                         "Straight",]
+        self.result = [["You go through the left door"],
+                       ["You hurry down the Corridor"]]
