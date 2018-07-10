@@ -5,9 +5,8 @@ class Text(object):
         self.decision = None
         self.result = None
 
-    def
 
-class king_text():
+class King_text():
     def __init__(self):
         self.num_choice = 3
         self.intro = ["What should I do now?"]
@@ -18,7 +17,7 @@ class king_text():
                        "With the note written you leave",
                        "Saddling your horse you leave"]
 
-class vizzi_text():
+class Vizzi_text():
     def __init__(self):
         self.num_choice = 3
         self.intro = [ "On the way you encounter Vizzi who was",
@@ -30,7 +29,7 @@ class vizzi_text():
                        "He hurries away to drink away his shame",
                        "For the money you paid him, he agrees to come"]
 
-class king_text():
+class Charles_text():
     def __init__(self):
         self.num_choice = 3
         self.intro = ["As you are considering whether or not to take the",
