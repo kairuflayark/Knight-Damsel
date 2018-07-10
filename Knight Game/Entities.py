@@ -11,6 +11,31 @@ class Entitiy(object):
         self.frame_num = 0
         self.frame = None
 
+
+
+class Player(Entitiy):#the player
+    frames = None
+
+class King(Entitiy):#the king
+    frames = None
+
+class Vizzi(Entity):#the fake villan
+    frames = None
+
+class Charles(Entity):#the other knight
+    frames = None
+
+class Princess(Entity):#Princess
+    frames = None
+
+class Dragon(Entity):#female villan
+    frames = None
+
+class Wizard(Entity):#wizard?
+    frames = None
+
+
+
 """
 left George in here as an example
 class George(Entity):
