@@ -1,0 +1,22 @@
+import pygame
+
+
+
+class plot(object)
+    def __init__(self):
+        # king 1 = talked to king
+        # King 2 = left note
+        # king 3 = Headed right off
+        king = 0
+        vizzi = 0
+        charles = 0
+        door = 0
+        dragon = 0
+        wizard = 0
+
+    
+
+    def update(self):
+        if (king == 2 and vizzi == 2) or (king == 1 and (knight != 3)):
+            suspicion = True
+
