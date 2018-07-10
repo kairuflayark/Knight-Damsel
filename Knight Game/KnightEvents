@@ -47,7 +47,7 @@ class Plot(object):
 
 
     def update_final_boss(self):
-        if (self.king == 2 and self.vizzi == 2) or (self.king == 1 and (self.knight != 3)):
+        if (self.king == 2 and self.vizzi == 2) or (self.king == 1 and (self.charles != 3)):
             self.kingBoss = True
         if self.charles != 1:
             self.charlesBoss = True
