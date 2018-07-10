@@ -10,6 +10,9 @@ COAL = 3
 STONE = 4
 GOLD = 5
 DUNGEON = 6
+TORCH_STONE_UP = 7
+TORCH_STONE_DOWN = 8
+RED_CARPET = 9
 
 colors = {
     DIRT: pygame.image.load('dirt.png'),
@@ -18,20 +21,23 @@ colors = {
     COAL: pygame.image.load('dirt.png'),
     STONE: pygame.image.load('stone.png'),
     GOLD: pygame.image.load('gold.png'),
-    DUNGEON: pygame.image.load('dungeon.png')
+    DUNGEON: pygame.image.load('dungeon.png'),
+    TORCH_STONE_UP: pygame.image.load('torch_stone_up.png'),
+    TORCH_STONE_DOWN: pygame.image.load('torch_stone_down.png'),
+    RED_CARPET: pygame.image.load('red_carpet.png')
 }
 
 
 tilemap = [
-    [GRASS, GRASS, STONE, WATER, DUNGEON],
-    [GOLD, STONE, STONE, WATER, DUNGEON],
-    [GOLD, STONE, WATER, WATER, DUNGEON],
-    [GOLD, STONE, STONE, STONE, STONE],
-    [GOLD, GOLD, GOLD, GOLD, GOLD]
+    [GOLD, TORCH_STONE_DOWN, STONE, TORCH_STONE_DOWN, STONE, TORCH_STONE_DOWN, STONE, TORCH_STONE_DOWN, STONE, TORCH_STONE_DOWN],
+    [GOLD, GOLD, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE],
+    [GOLD, GOLD, GOLD, GOLD, RED_CARPET, RED_CARPET, RED_CARPET, RED_CARPET, RED_CARPET, RED_CARPET],
+    [GOLD, GOLD, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE],
+    [GOLD, TORCH_STONE_UP, STONE, TORCH_STONE_UP, STONE, TORCH_STONE_UP, STONE, TORCH_STONE_UP, STONE, TORCH_STONE_UP]
 ]
 
 TILESIZE = 40
-MAPWIDTH = 5
+MAPWIDTH = 10
 MAPHEIGHT = 5
 
 
