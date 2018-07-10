@@ -20,13 +20,20 @@ class Pane(object):
         # dimensions are X,Y, X2,Y2
         self.rect = pygame.draw.rect(self.screen, black, (0, 300, 600, 400))
         pygame.display.update()
+        text = ["He sends you off with his trust",
+                  "With the note written you leave",
+                  "Saddling your horse you leave"]
         # can display 54 characters / line
-        text = 'Testing one two three four five six seven eight nine ten'
+        # text = 'Testing one two three four five six seven eight nine ten'
         printT = 300
         printR = 2
         letterCount = 0
         # render ((content, [not sure what True does] (color of font)) (location to start drawing at)
-        self.screen.blit(self.font.render('Testing one two three', True, (255,0,0)), (printR, printT))
+        i = 0
+        while text:
+            self.screen.blit(self.font.render(text[i], True, (255,0,0)), (printR, printT))
+            printT += 20
+            i += 1
         pygame.display.update()
 
 if __name__ == '__main__':
