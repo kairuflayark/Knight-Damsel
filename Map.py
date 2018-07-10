@@ -13,6 +13,7 @@ DUNGEON = 6
 TORCH_STONE_UP = 7
 TORCH_STONE_DOWN = 8
 RED_CARPET = 9
+BUSH = 10
 
 colors = {
     DIRT: pygame.image.load('dirt.png'),
@@ -24,11 +25,28 @@ colors = {
     DUNGEON: pygame.image.load('dungeon.png'),
     TORCH_STONE_UP: pygame.image.load('torch_stone_up.png'),
     TORCH_STONE_DOWN: pygame.image.load('torch_stone_down.png'),
-    RED_CARPET: pygame.image.load('red_carpet.png')
+    RED_CARPET: pygame.image.load('red_carpet.png'),
+    BUSH: pygame.image.load('bush.png')
 }
 
 
 tilemap = [
+    [GRASS, BUSH, GRASS, BUSH, GRASS, BUSH, GRASS, BUSH, GRASS, BUSH],
+    [DIRT, DIRT, DIRT, DIRT, STONE, STONE, DIRT, DIRT, DIRT, DIRT],
+    [STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE],
+    [DIRT, DIRT, DIRT, DIRT, DIRT, DIRT, DIRT, DIRT, DIRT, DIRT],
+    [GRASS, BUSH, GRASS, BUSH, GRASS, BUSH, GRASS, BUSH, GRASS, BUSH]
+]
+
+road = [
+    [GRASS, BUSH, GRASS, BUSH, GRASS, BUSH, GRASS, BUSH, GRASS, BUSH],
+    [DIRT, DIRT, DIRT, DIRT, STONE, STONE, DIRT, DIRT, DIRT, DIRT],
+    [STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE],
+    [DIRT, DIRT, DIRT, DIRT, DIRT, DIRT, DIRT, DIRT, DIRT, DIRT],
+    [GRASS, BUSH, GRASS, BUSH, GRASS, BUSH, GRASS, BUSH, GRASS, BUSH]
+]
+
+kings_chamber = [
     [GOLD, TORCH_STONE_DOWN, STONE, TORCH_STONE_DOWN, STONE, TORCH_STONE_DOWN, STONE, TORCH_STONE_DOWN, STONE, TORCH_STONE_DOWN],
     [GOLD, GOLD, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE],
     [GOLD, GOLD, GOLD, GOLD, RED_CARPET, RED_CARPET, RED_CARPET, RED_CARPET, RED_CARPET, RED_CARPET],
