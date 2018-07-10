@@ -1,6 +1,5 @@
 import os
 import pygame
-import Graphics
 
 class Entitiy(object):
     def __init__(self):
