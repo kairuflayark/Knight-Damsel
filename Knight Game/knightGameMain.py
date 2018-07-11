@@ -9,7 +9,7 @@ import knighttext
 import time
 import AudioLoader #enables loading and unloading of music and sound
 import Graphics #system to handle loading unloading and rendering of graphics
-#import Entities
+import Entities
 
 #!!!! Priority write assignments !!!!
 

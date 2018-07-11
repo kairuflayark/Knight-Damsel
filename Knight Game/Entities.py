@@ -15,13 +15,13 @@ class Entitiy(object):
 class Player(Entitiy):#the player
     frames = {
         "up": [(3 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 4
+               for y in range(4)],  #row 4
         "down": [(0,y * 48,32,48)
-                 for y in xrange(4)],#row 1
+               for y in range(4)],  #row 1
         "left": [(1 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 2
+               for y in range(4)],  #row 2
         "right": [(2 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 3
+               for y in range(4)],  #row 3
         }
 
     def __init__(self):
@@ -71,13 +71,13 @@ class Player(Entitiy):#the player
 class King(Entitiy):#the king
     frames = {
         "up": [(3 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 4
+               for y in range(4)],  #row 4
         "down": [(0,y * 48,32,48)
-                 for y in xrange(4)],#row 1
+               for y in range(4)],  #row 1
         "left": [(1 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 2
+               for y in range(4)],  #row 2
         "right": [(2 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 3
+               for y in range(4)],  #row 3
         }
 
     def __init__(self):
@@ -97,16 +97,16 @@ class King(Entitiy):#the king
         self.frame_num = (self.frame_num + self.speed * .25)%4
         self.frame =  self.frames[self.facing][self.frame_num]
 
-class Vizzi(Entity):#the fake villan
+class Vizzi(Entitiy):#the fake villan
     frames = {
         "up": [(3 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 4
+               for y in range(4)],  #row 4
         "down": [(0,y * 48,32,48)
-                 for y in xrange(4)],#row 1
+               for y in range(4)],  #row 1
         "left": [(1 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 2
+               for y in range(4)],  #row 2
         "right": [(2 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 3
+               for y in range(4)],  #row 3
         }
 
     def __init__(self):
@@ -126,16 +126,16 @@ class Vizzi(Entity):#the fake villan
         self.frame_num = (self.frame_num + self.speed * .25)%4
         self.frame =  self.frames[self.facing][self.frame_num]
 
-class Charles(Entity):#the other knight
+class Charles(Entitiy):#the other knight
     frames = {
         "up": [(3 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 4
+               for y in range(4)],  #row 4
         "down": [(0,y * 48,32,48)
-                 for y in xrange(4)],#row 1
+               for y in range(4)],  #row 1
         "left": [(1 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 2
+               for y in range(4)],  #row 2
         "right": [(2 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 3
+               for y in range(4)],  #row 3
         }
 
     def __init__(self):
@@ -155,16 +155,16 @@ class Charles(Entity):#the other knight
         self.frame_num = (self.frame_num + self.speed * .25)%4
         self.frame =  self.frames[self.facing][self.frame_num]
 
-class Princess(Entity):#Princess
+class Princess(Entitiy):#Princess
     frames = {
         "up": [(3 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 4
+               for y in range(4)],  #row 4
         "down": [(0,y * 48,32,48)
-                 for y in xrange(4)],#row 1
+               for y in range(4)],  #row 1
         "left": [(1 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 2
+               for y in range(4)],  #row 2
         "right": [(2 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 3
+               for y in range(4)],  #row 3
         }
 
     def __init__(self):
@@ -184,16 +184,16 @@ class Princess(Entity):#Princess
         self.frame_num = (self.frame_num + self.speed * .25)%4
         self.frame =  self.frames[self.facing][self.frame_num]
 
-class Dragon(Entity):#female villan
+class Dragon(Entitiy):#female villan
     frames = {
         "up": [(3 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 4
+               for y in range(4)],  #row 4
         "down": [(0,y * 48,32,48)
-                 for y in xrange(4)],#row 1
+               for y in range(4)],  #row 1
         "left": [(1 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 2
+               for y in range(4)],  #row 2
         "right": [(2 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 3
+               for y in range(4)],  #row 3
         }
 
 
@@ -216,16 +216,16 @@ class Dragon(Entity):#female villan
     
 
     
-class Wizard(Entity):#wizard?
+class Wizard(Entitiy):#wizard?
     frames = {
         "up": [(3 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 4
+               for y in range(4)],  #row 4
         "down": [(0,y * 48,32,48)
-                 for y in xrange(4)],#row 1
+               for y in range(4)],  #row 1
         "left": [(1 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 2
+               for y in range(4)],  #row 2
         "right": [(2 * 32,y * 48,32,48)
-               for y in xrange(4)],  #row 3
+               for y in range(4)],  #row 3
         }
 
     def __init__(self):
