@@ -1,9 +1,11 @@
+import pygame
 
 
 
 
 class Plot(object):
     def __init__(self):
+        self.Event = 0
         # king 1 = talked to king
         # King 2 = left note
         # king 3 = Headed right off
@@ -49,11 +51,24 @@ class Plot(object):
             if value == 1:
                 self.isAlive = False
         elif event == 5:
-            self.villain = value
+            if self.charlesBoss and self.kingBoss:
+                self.villain = 2
+            elif self.charlesBoss:
+                self.villain = 0
+            elif self.kingBoss:
+                self.villain = 1
         elif event == 6:
             self.princess = value
             if self.kingBoss and value == 2:
                 self.isAlive = False
+
+
+
+        def key_handler(self, e):
+            if e.type == pygame.KEYDOWN:
+                if e.key == pygame.K_KP_ENTER:
+
+
 
 
 

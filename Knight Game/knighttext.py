@@ -5,6 +5,9 @@ class Text(object):
         self.decision = None
         self.result = None
 
+    def getText(self, value):
+        return self.result[value]
+
 
 class King_text(Text):
     def __init__(self):
@@ -13,9 +16,13 @@ class King_text(Text):
         self.decision = ["Tell the King",
                          "Leave a note",
                          "Leave immediately"]
-        self.result = ["He sends you off with his trust",
-                       "With the note written you leave",
-                       "Saddling your horse you leave"]
+        self.result = [["He sends you off with his trust"],
+                       ["With the note written you leave"],
+                       ["Saddling your horse you leave"]]
+
+    def getText(self, value):
+        return self.result[value]
+
 
 class Vizzi_text(Text):
     def __init__(self):
@@ -41,7 +48,7 @@ class Charles_text(Text):
                        ["With a mighty clash of swords he collapses bloodied and exhausted"],
                        ["He agrees and tells you to choose which door to go through"]]
 
-class Dragom_text():
+class Dragon_text():
     def __init__(self):
         self.num_choice = 2
         self.intro = [ "Standing beyond the door is a Battle scared warrior woman" ]
@@ -53,7 +60,7 @@ class Dragom_text():
                        ["She ignores your actions and you die a bloody death"],
                        ["Vizzi begins to flirt with her and you escape past her"]]
 
-class Wizard_text():
+class Wizard_Text(Text):
     def __init__(self):
         self.num_choice = 2
         self.intro = [ "The Room is Gloomy and a powerful mage leans over a cauldron" ]
@@ -63,6 +70,45 @@ class Wizard_text():
         self.result = [[""],
                        ["You hurry down the Corridor"]]
 
-def getText():
-    #// Use KnightEvents module to determine what text is displayed.
-    pass
+class Villian_Text(Text):
+    def __init__(self):
+        self.num_choice = 2
+        self.intro = [ "Finally you have reached the dastardly villain",
+                       "beyond the door you can see the cell he",
+                        "is holding the Princess in." ]
+        self.decision = ["Fight",
+                         "Fight",
+                         "and Fight"]
+        self.result = [["The Other knight bursts through the door angry that his plans", " to kidnap the Princess were foiled"],
+                       ["The King enters through the door having found out", "that you had arranged to have his daughter kidnapped."]]
+
+class Princess_King_text(Text):
+    def __init__(self):
+        self.num_choice = 2
+        self.intro = [ "After a long battle the king falls to his knees exhausted" ]
+        self.decision = ["Explain your actions",
+                         "Kill him!"]
+        self.result = [["Good End"],
+                       ["You hurry down the Corridor"]]
+
+class Princess_Charles_text(Text):
+    def __init__(self):
+        self.num_choice = 2
+        self.intro = [ "The " ]
+        self.decision = ["Bluff your way past",
+                         "Kick him into the Cauldron",
+                         "Fight"]
+        self.result = [[""],
+                       ["You hurry down the Corridor"]]
+
+class Princess_King_and_Charles_text(Text):
+    def __init__(self):
+        self.num_choice = 2
+        self.intro = [ "The " ]
+        self.decision = ["Bluff your way past",
+                         "Kick him into the Cauldron",
+                         "Fight"]
+        self.result = [[""],
+                       ["You hurry down the Corridor"]]
+def getText(value):
+    return decision[value]

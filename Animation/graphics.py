@@ -1,7 +1,5 @@
 import pygame
 
-# import pygame.image
-
 resolution = None
 screen = None
 background = None

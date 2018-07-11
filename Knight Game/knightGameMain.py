@@ -1,6 +1,11 @@
-import pygame
 import sys
+
+import pygame
+
 import michael
+import knighttext
+
+
 #import time
 #import AudioLoader #enables loading and unloading of music and sound
 #import Graphics #system to handle loading unloading and rendering of graphics
@@ -9,7 +14,6 @@ import michael
 #!!!! Priority write assignments !!!!
 
 #import knightStory    #Stores story nodes to be called
-#import knightEvents   #Stores game events
 #import knightDungeon   #Procedural room/dungeon generation system
 
 pygame.init()
@@ -26,13 +30,13 @@ while run:
 
     #Physics Second
 
-
+    king = knighttext.King_text.getText(knighttext.King_text(), 1)
     #Rendering Third
     #//Graphics.render()
 
     michael.drawScreen(screen) #// ONLY A PLACEHOLDER FOR TESTING. REPLACE WITH MAP RENDERING.
     michael.drawTextBox(screen)
-    michael.drawText(["Hello World!"], screen)
+    michael.drawText(king, screen)
     pygame.display.flip()
 
     for event in pygame.event.get():
