@@ -63,3 +63,6 @@ class Wizard_text():
         self.result = [[""],
                        ["You hurry down the Corridor"]]
 
+def getText():
+    #// Use KnightEvents module to determine what text is displayed.
+    pass
