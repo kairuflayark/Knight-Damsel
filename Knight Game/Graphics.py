@@ -43,7 +43,7 @@ def render():
 
     pygame.display.flip()#print to screen
     
-def load(path)
+def load(path):
     global images
     if path not in images:
         images[path] = pygame.image.load(path)
