@@ -5,8 +5,7 @@ class Text(object):
         self.decision = None
         self.result = None
 
-
-class King_text(Text):
+class King_text():
     def __init__(self):
         self.num_choice = 3
         self.intro = [["What should I do now?"]]
@@ -38,7 +37,7 @@ class Charles_text(Text):
                          "Try and convince him to leave",
                          "Make it into a competition"]
         self.result = [["He falls and his body lies resting on the floor"],
-                       ["With a mighty clash of swords he collapses bloodied and exhausted",]
+                       ["With a mighty clash of swords he collapses bloodied and exhausted"],
                        ["He agrees and tells you to choose which door to go through"]]
 
 class Dragom_text():
