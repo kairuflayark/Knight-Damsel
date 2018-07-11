@@ -1,4 +1,4 @@
-import pygame
+
 
 
 
@@ -7,50 +7,54 @@ class Plot(object):
         # king 1 = talked to king
         # King 2 = left note
         # king 3 = Headed right off
-        self.king = 0
-        self.vizzi = 0
-        self.charles = 0
-        self.door = 0
-        self.dragon = 0
-        self.wizard = 0
-        self.villain = 0
+        self.king = None
+        self.vizzi = None
+        self.charles = None
+        self.door = None
+        self.dragon = None
+        self.wizard = None
+        self.villain = None
         self.charlesBoss = False
         self.kingBoss = False
         self.hasVizzi = False
-        self.princess = 0
+        self.princess = None
+        self.isAlive = True
 
-    def update_king(self, value):
-        self.king = value
-
-    def update_vizzi(self, value):
-        self.vizzi = value
-        if value == 3:
-            self.hasVizzi = True
-
-    def update_charles(self, value):
-        self.charles = value
-
-    def update_door(self, value):
-        self.door = value
-
-    def update_dragon(self, value):
-        if value == 1 and self.hasVizzi == True:
-            self.dragon = 4
-        else:
-            self.dragon = value
-
-    def update_wizard(self, value):
-        self.wizard = value
-
-    def update_villain(self, value):
-        self.villain = value
-
-
-    def update_final_boss(self):
+    def updateplot(self, event, value):
         if (self.king == 2 and self.vizzi == 2) or (self.king == 1 and (self.charles != 3)):
             self.kingBoss = True
         if self.charles != 1:
             self.charlesBoss = True
+        if event == 0:
+            self.king = value
+        elif event == 1:
+            self.vizzi = value
+            if value == 2:
+                self.hasVizzi = True
+        elif event == 2:
+            self.charles = value
+        elif event == 3:
+            self.door = value
+        elif event == 4 and self.door == 0:
+            if value == 2:
+                if self.hasVizzi:
+                    self.dragon = 3
+                else:
+                    self.isAlive = False
+                    self.dragon = value
+            else:
+                self.dragon = value
+        elif event == 4 and self.door == 1:
+            self.wizard = value
+            if value == 1:
+                self.isAlive = False
+        elif event == 5:
+            self.villain = value
+        elif event == 6:
+            self.princess = value
+            if self.kingBoss and value == 2:
+                self.isAlive = False
 
-    def update_final_boss_end(self, value):
+
+
 
