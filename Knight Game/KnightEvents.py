@@ -1,4 +1,4 @@
-import pygame
+# import pygame
 
 
 
@@ -64,9 +64,9 @@ class Plot(object):
 
 
 
-        def key_handler(self, e):
-            if e.type == pygame.KEYDOWN:
-                if e.key == pygame.K_KP_ENTER:
+        # def key_handler(self, e):
+        #     if e.type == pygame.KEYDOWN:
+        #         if e.key == pygame.K_KP_ENTER:
 
 
 
