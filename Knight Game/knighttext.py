@@ -9,10 +9,10 @@ class Text(object):
 class King_text(Text):
     def __init__(self):
         self.num_choice = 3
-        self.intro = [["What should I do now?"]]
-        self.decision = [["Tell the King"],
-                         ["Leave a note"],
-                         ["Leave immediately"]]
+        self.intro = ["What should I do now?"]
+        self.decision = ["Tell the King",
+                         "Leave a note",
+                         "Leave immediately"]
         self.result = ["He sends you off with his trust",
                        "With the note written you leave",
                        "Saddling your horse you leave"]
@@ -38,7 +38,7 @@ class Charles_text(Text):
                          "Try and convince him to leave",
                          "Make it into a competition"]
         self.result = [["He falls and his body lies resting on the floor"],
-                       ["With a mighty clash of swords he collapses bloodied and exhausted",]
+                       ["With a mighty clash of swords he collapses bloodied and exhausted"],
                        ["He agrees and tells you to choose which door to go through"]]
 
 class Dragom_text():
