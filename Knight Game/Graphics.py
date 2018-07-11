@@ -1,5 +1,10 @@
 import pygame
 
+#import Map
+tiles = []#tiles = Map.tiles
+
+
+
 resolution = None
 screen = None
 sprites = []
@@ -27,13 +32,16 @@ def remove(sprite):
         
 def render():
     global screen, background
-    screen.fill((0,0,0))
+    screen.fill((0,0,0))#black
+    screen.blit(background, (0,0))#load backgroud
+    
+    for tile in tileMap:#load map first
+        screen.blit(tile.sprite, (tile.x, tile.y), tile.frame)
+        
+    for sprite in sprites:#load entities
+        screen.blit(sprite.sprite, (sprite.x, sprite.y), sprite.frame)
 
-    screen.blit(background, (0,0))
-    for sprite in sprites:
-        scree.blit(sprite.sprite,(sprite.frame))
-
-    pygame.display.flip()
+    pygame.display.flip()#print to screen
     
 def load(path)
     global images
