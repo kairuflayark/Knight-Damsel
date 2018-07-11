@@ -5,7 +5,8 @@ class Text(object):
         self.decision = None
         self.result = None
 
-class King_text():
+
+class King_text(Text):
     def __init__(self):
         self.num_choice = 3
         self.intro = [["What should I do now?"]]
@@ -62,3 +63,6 @@ class Wizard_text():
         self.result = [[""],
                        ["You hurry down the Corridor"]]
 
+def getText():
+    #// Use KnightEvents module to determine what text is displayed.
+    pass

@@ -1,6 +1,6 @@
 import pygame
-import knighttext
 import sys
+import michael
 #import time
 #import AudioLoader #enables loading and unloading of music and sound
 #import Graphics #system to handle loading unloading and rendering of graphics
@@ -30,8 +30,10 @@ while run:
     #Rendering Third
     #//Graphics.render()
 
-    TextBox.Pane()  #//Shows a blank screen. REPLACE WITH MAP RENDERING
-
+    michael.drawScreen(screen) #// ONLY A PLACEHOLDER FOR TESTING. REPLACE WITH MAP RENDERING.
+    michael.drawTextBox(screen)
+    michael.drawText(["Hello World!"], screen)
+    pygame.display.flip()
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

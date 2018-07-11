@@ -1,5 +1,6 @@
 import pygame
 import sys
+import knighttext
 
 white = (255,255,255)
 black = (0,0,0)
@@ -12,7 +13,6 @@ class Pane(object):
         self.screen = pygame.display.set_mode((600,400), 0, 32)
         self.screen.fill(white)
         pygame.display.update()
-
 
     def addText(self):
         # dimensions are X,Y, X2,Y2
@@ -32,6 +32,7 @@ class Pane(object):
             printT += 15
             i += 1
         pygame.display.update()
+
 
 if __name__ == '__main__':
     Pan3 = Pane()
