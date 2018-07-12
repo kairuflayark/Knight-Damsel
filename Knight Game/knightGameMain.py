@@ -36,8 +36,8 @@ def quit(e):
         run = False
 Events.register(pygame.QUIT, quit)
 Events.register(pygame.KEYUP, quit)
-Events.register(pygame.KEYDOWN, player.key_handler)
-Events.register(pygame.KEYUP, player.key_handler)
+#Events.register(pygame.KEYDOWN, player.key_handler)
+#Events.register(pygame.KEYUP, player.key_handler)
 
 clock = pygame.time.Clock()
 
