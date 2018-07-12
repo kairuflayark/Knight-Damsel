@@ -33,8 +33,7 @@ while run:
 
     ####Physics Second
 
-    king = knighttext.King_text.getText(knighttext.King_text(), 1)
-    ####Rendering Third
+
     Graphics.render()
 
     #//michael.drawScreen(screen) #// ONLY A PLACEHOLDER FOR TESTING. REPLACE WITH MAP RENDERING.

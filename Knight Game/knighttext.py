@@ -9,7 +9,7 @@ class Text(object):
         self.result = None
 
     def getIntro(self):
-        return self.intro
+        return self.intro[0]
 
 
 class King_text(Text):
@@ -133,4 +133,4 @@ def getText(event, part):
         if part == 0:
             text = King_text.getIntro(King_text())
 
-    return text
+    print(text)
