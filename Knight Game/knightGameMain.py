@@ -9,12 +9,13 @@ import time
 import AudioLoader #enables loading and unloading of music and sound
 import Graphics #system to handle loading unloading and rendering of graphics
 import Entities
-#import Events
+import Events
 
 #!!!! Priority write assignments !!!!
 #Connect map to render
 #add entities
 
+#####INITIALIZATION#####
 pygame.init()
 screenRez = ((800,600))
 #//screen = pygame.display.set_mode((800,600))
@@ -22,17 +23,34 @@ screenRez = ((800,600))
 Graphics.init(screenRez)
 run = True
 
+#player = Entities.Player()
+
+def quit(e):
+    global run
+    if (e.type == pygame.KEYUP):
+        if (e.key == pygame.K_F4 and e.mod & pygame.KMOD_ALT):
+            run = False
+    elif (e.type == pygame.QUIT):
+        run = False
+Events.register(pygame.QUIT, quit)
+Events.register(pygame.KEYUP, quit)
+#Events.register(pygame.KEYDOWN, player.key_handler)
+#Events.register(pygame.KEYUP, player.key_handler)
+
 clock = pygame.time.Clock()
 
+
+
+
+
+
+#####GAME LOOP#####
 while run:
     clock.tick(30)  #30 FPS
 
     ####Events First
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
-    #for i in range(0, 6):
-    #    for j in range(0,2):
+    Events.update()
+   
     ####Physics Second
 
     ####Physics Third
