@@ -89,12 +89,13 @@ class Plot(object):
 
     def currentRoom(self):
         return self.currentEvent
-
+    #
     # def key_handler(self, e):
-        #     if e.type == pygame.KEYDOWN:
-        #         if e.key == pygame.K_KP_ENTER:
-
-
+    #         if e.type == pygame.KEYDOWN:
+    #             if e.key == pygame.K_KP_ENTER:
+    #
+    #
+    #
 
 
 

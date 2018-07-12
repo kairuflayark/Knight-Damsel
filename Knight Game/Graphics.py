@@ -3,6 +3,7 @@ import pygame
 import michael
 import Events
 import Map
+import Entities
 
 tileMap = []
 
@@ -49,11 +50,13 @@ def render():
     for sprite in sprites:#load entities
         screen.blit(sprite.sprite, (sprite.x, sprite.y), sprite.frame)
 
+
     #IF textbox load textbox
     michael.drawTextBox(screen)
     michael.drawText(Events.Plot.currentText(Events.Plot()), screen)
         #if textbox:
             #print("There is a text box!")
+    Entities.displayArrow(screen, 1, 0)
 
     pygame.display.flip()#print to screen
     
@@ -62,4 +65,3 @@ def load(path):
     if path not in images:
         images[path] = pygame.image.load(path)
     return images[path]
-        

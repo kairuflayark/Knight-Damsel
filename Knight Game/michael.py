@@ -32,7 +32,7 @@ class drawText():
         for i in range(0, len(text)):
             #myfont.render([text], [anti-alias], text color(r, g, b))
             label = myfont.render(text[i][0], 1, txtColor)
-            self.screen.blit(label, (2, printT))
+            self.screen.blit(label, (40, printT))
             printT += 15
             i += 1
         #pygame.display.update()    #//when used in Main, it renders better with display.flip()
