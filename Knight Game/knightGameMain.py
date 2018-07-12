@@ -5,16 +5,15 @@ import pygame
 import michael
 import text
 
-
 import time
 import AudioLoader #enables loading and unloading of music and sound
 import Graphics #system to handle loading unloading and rendering of graphics
 import Entities
+#import Events
 
 #!!!! Priority write assignments !!!!
-
-#import knightStory    #Stores story nodes to be called
-#import knightDungeon   #Procedural room/dungeon generation system
+#Connect map to render
+#add entities
 
 pygame.init()
 screenRez = ((800,600))
@@ -29,11 +28,14 @@ while run:
     clock.tick(30)  #30 FPS
 
     ####Events First
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
     #for i in range(0, 6):
     #    for j in range(0,2):
     ####Physics Second
 
-
+    ####Physics Third
     Graphics.render()
 
     #//michael.drawScreen(screen) #// ONLY A PLACEHOLDER FOR TESTING. REPLACE WITH MAP RENDERING.
@@ -41,7 +43,6 @@ while run:
     #//michael.drawText(king, screen)
     #//pygame.display.flip()
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+    
+pygame.quit()
+sys.exit()
