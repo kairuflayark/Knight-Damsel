@@ -44,10 +44,6 @@ Events.register(pygame.KEYUP, quit)
 clock = pygame.time.Clock()
 
 
-
-
-
-
 #####GAME LOOP#####
 while run:
     clock.tick(30)  #30 FPS
@@ -59,11 +55,6 @@ while run:
 
     ####Graphics Third
     Graphics.render(Plot)
-
-    #//michael.drawScreen(screen) #// ONLY A PLACEHOLDER FOR TESTING. REPLACE WITH MAP RENDERING.
-    #//michael.drawTextBox(screen)
-    #//michael.drawText(king, screen)
-    #//pygame.display.flip()
 
     
 pygame.quit()
