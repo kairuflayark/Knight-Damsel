@@ -44,7 +44,7 @@ def render():
     #for row in range(Map.MAPHEIGHT):
     #    for column in range(Map.MAPWIDTH):
     #        screen.blit(Map.tiles[Map.tilemap[row][column]], (column * Map.TILESIZE, row * Map.TILESIZE))
-    Map.displayMap(Events.currentRoom, screen)
+    Map.displayMap(Events.Plot().currentRoom(), screen)
         
     for sprite in sprites:#load entities
         screen.blit(sprite.sprite, (sprite.x, sprite.y), sprite.frame)

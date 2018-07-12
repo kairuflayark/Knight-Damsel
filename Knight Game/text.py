@@ -221,5 +221,4 @@ def getText(event, part, decision):
             text = Princess_text.getDecision(Princess_text())
         else:
             text = Princess_text.getResult(Princess_text(), decision)
-    print(text)
     return text

@@ -82,7 +82,7 @@ MAPHEIGHT = 5
 
 
 
-dispMap(mapNum, screen):
+def displayMap(mapNum, screen):
     global kings_chamber, road, tilemap, dungeon_entry, dungeon_mid
     currentMap = []
     if mapNum == 0:

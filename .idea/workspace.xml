@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51151f2d-94d4-4b61-8512-4fc498bbe64f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Knight Game/Events.py" beforeDir="false" afterPath="$PROJECT_DIR$/Knight Game/Events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Knight Game/Map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Knight Game/Map.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,17 +17,17 @@
       <file leaf-file-name="knightGameMain.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Knight Game/knightGameMain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="531">
               <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Map.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Map.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Knight Game/Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="34">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -38,8 +38,8 @@
       <file leaf-file-name="Events.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Knight Game/Events.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+            <state relative-caret-position="242">
+              <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
@@ -47,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graphics.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Graphics.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Knight Game/Graphics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            <state relative-caret-position="-238">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -62,8 +62,17 @@
       <file leaf-file-name="michael.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Knight Game/michael.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
+            <state relative-caret-position="116">
               <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entities.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Knight Game/Entities.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2635">
+              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -103,9 +112,9 @@
         <option value="$PROJECT_DIR$/Knight Game/KnightEvents.py" />
         <option value="$PROJECT_DIR$/Knight Game/knighttext.py" />
         <option value="$PROJECT_DIR$/Knight Game/text.py" />
-        <option value="$PROJECT_DIR$/Knight Game/Map.py" />
-        <option value="$PROJECT_DIR$/Knight Game/Events.py" />
         <option value="$PROJECT_DIR$/Knight Game/Graphics.py" />
+        <option value="$PROJECT_DIR$/Knight Game/Events.py" />
+        <option value="$PROJECT_DIR$/Knight Game/Map.py" />
       </list>
     </option>
   </component>
@@ -425,7 +434,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531413688275</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fixing merge conflict">
+      <created>1531413782949</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1531413782949</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Set up currentRoom">
+      <created>1531415191593</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1531415191593</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -435,8 +458,8 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20058565" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021962" side_tool="true" weight="0.3227345" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978038" weight="0.3227345" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49853587" visible="true" weight="0.3338633" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4978038" visible="true" weight="0.3227345" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49853587" weight="0.3338633" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -490,7 +513,8 @@
     <MESSAGE value="Working on getting text to show" />
     <MESSAGE value="Behold the power of this fully functional text system!" />
     <MESSAGE value="fixing merge conflict" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing merge conflict" />
+    <MESSAGE value="Set up currentRoom" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up currentRoom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -619,13 +643,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Knight Game/KnightEvents" />
-    <entry file="file://$PROJECT_DIR$/Knight Game/Entities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Map.py" />
     <entry file="file://$PROJECT_DIR$/Animation/events.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -675,44 +692,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Knight Game/michael.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knight Game/Entities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2635">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Knight Game/knightGameMain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="531">
           <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Knight Game/Events.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+        <state relative-caret-position="242">
+          <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding>
             <element signature="e#16#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Knight Game/michael.py">
+    <entry file="file://$PROJECT_DIR$/Knight Game/Graphics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Knight Game/Map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="-238">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Knight Game/Graphics.py">
+    <entry file="file://$PROJECT_DIR$/Knight Game/Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        <state relative-caret-position="34">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
