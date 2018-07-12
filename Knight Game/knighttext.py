@@ -29,9 +29,11 @@ class King_text(Text):
     def getIntro(self):
         return self.intro[0]
 
-    def getText(self, value):
-        return self.result[value]
+    def getDecision(self):
+        return self.decision
 
+    def getResult(self, value):
+        return self.result[value]
 
 class Vizzi_text(Text):
     def __init__(self):
@@ -127,10 +129,14 @@ class Princess_King_and_Charles_text(Text):
         self.result = [[""],
                        ["You hurry down the Corridor"]]
 
-def getText(event, part):
+def getText(event, part, decision):
     text = None
     if event == 0:
         if part == 0:
             text = King_text.getIntro(King_text())
+        elif part == 1:
+            text = King_text.getDecision(King_text())
+        else:
+            text = King_text.getResult(King_text(), decision)
 
-    print(text)
+    return text

@@ -47,7 +47,7 @@ def render():
 
     #IF textbox load textbox
     michael.drawTextBox(screen)
-    michael.drawText(["The cake is a lie"], screen)
+    michael.drawText(knighttext.getText(0,2,0), screen)
         #if textbox:
             #print("There is a text box!")
 

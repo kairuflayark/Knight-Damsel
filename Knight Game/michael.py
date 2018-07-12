@@ -28,9 +28,10 @@ class drawText():
         i = 0
         printT = sHeight * 3/4
         myfont = pygame.font.SysFont("monospace", 30)
+
         for i in range(0, len(text)):
             #myfont.render([text], [anti-alias], text color(r, g, b))
-            label = myfont.render(text[i], 1, txtColor)
+            label = myfont.render(text[i][0], 1, txtColor)
             self.screen.blit(label, (2, printT))
             printT += 15
             i += 1
