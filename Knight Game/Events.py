@@ -67,11 +67,20 @@ class Plot(object):
     def currentText(self):
         return text.getText(self.currentEvent, self.currentState, self.decision)
 
-    def currentRoom(self):
-        return self.currentEvent
+    # def currentRoom():
+    #     room = Events.Plot().currentRoom()
+    #     if room == 0:
+    #         return kings_chamber
+    #     elif room == 1:
+    #         return road
+    #     elif room == 2:
+    #         return dungeon_entry
+    #     elif room == 3:
+    #         return dungeon_mid
+    #     elif room == 4:
+    #         return dungeon_mid
 
-
-        # def key_handler(self, e):
+    # def key_handler(self, e):
         #     if e.type == pygame.KEYDOWN:
         #         if e.key == pygame.K_KP_ENTER:
 

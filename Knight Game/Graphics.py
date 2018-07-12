@@ -2,9 +2,9 @@ import pygame
 
 import michael
 import Events
+import Map
 
-#import Map
-tileMap = []#tiles = Map.tiles
+tileMap = Map.
 
 
 
