@@ -12,7 +12,7 @@ pygame.mixer.init()
 #pygame.mixer.music.play()
 adventure = pygame.mixer.Sound("TheLoomingBattle.ogg")
 
-adventure.play()
+adventure.play(-1)
 #coin.play()
 
 time.sleep(30)
