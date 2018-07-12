@@ -1,7 +1,10 @@
 import pygame
 
+import michael
+import knighttext
+
 #import Map
-tiles = []#tiles = Map.tiles
+tileMap = []#tiles = Map.tiles
 
 
 
@@ -32,14 +35,21 @@ def remove(sprite):
         
 def render():
     global screen, background
-    screen.fill((0,0,0))#black
-    screen.blit(background, (0,0))#load backgroud
+    screen.fill((255,255,255))#black
+    #screen.blit(background, (0,0))#load backgroud
     
     for tile in tileMap:#load map first
         screen.blit(tile.sprite, (tile.x, tile.y), tile.frame)
+
         
     for sprite in sprites:#load entities
         screen.blit(sprite.sprite, (sprite.x, sprite.y), sprite.frame)
+
+    #IF textbox load textbox
+    michael.drawTextBox(screen)
+    michael.drawText(["The cake is a lie"], screen)
+        #if textbox:
+            #print("There is a text box!")
 
     pygame.display.flip()#print to screen
     

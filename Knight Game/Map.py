@@ -14,23 +14,42 @@ TORCH_STONE_UP = 7
 TORCH_STONE_DOWN = 8
 RED_CARPET = 9
 BUSH = 10
+LAVA = 11
+
 
 colors = {
-    DIRT: pygame.image.load('dirt.png'),
-    GRASS: pygame.image.load('grass.png'),
-    WATER: pygame.image.load('water.png'),
-    COAL: pygame.image.load('dirt.png'),
-    STONE: pygame.image.load('stone.png'),
-    GOLD: pygame.image.load('gold.png'),
-    DUNGEON: pygame.image.load('dungeon.png'),
-    TORCH_STONE_UP: pygame.image.load('torch_stone_up.png'),
-    TORCH_STONE_DOWN: pygame.image.load('torch_stone_down.png'),
-    RED_CARPET: pygame.image.load('red_carpet.png'),
-    BUSH: pygame.image.load('bush.png')
+    DIRT: pygame.image.load('Tiles/dirt.png'),
+    GRASS: pygame.image.load('Tiles/grass.png'),
+    WATER: pygame.image.load('Tiles/water.png'),
+    COAL: pygame.image.load('Tiles/dirt.png'),
+    STONE: pygame.image.load('Tiles/stone.png'),
+    GOLD: pygame.image.load('Tiles/gold.png'),
+    DUNGEON: pygame.image.load('Tiles/dungeon.png'),
+    TORCH_STONE_UP: pygame.image.load('Tiles/torch_stone_up.png'),
+    TORCH_STONE_DOWN: pygame.image.load('Tiles/torch_stone_down.png'),
+    RED_CARPET: pygame.image.load('Tiles/red_carpet.png'),
+    BUSH: pygame.image.load('Tiles/bush.png'),
+    LAVA: pygame.image.load('Tiles/lava.png')
 }
 
 
 tilemap = [
+    [LAVA, LAVA, LAVA, LAVA, LAVA, LAVA, LAVA, LAVA, LAVA, LAVA],
+    [LAVA, LAVA, LAVA, LAVA, LAVA, STONE, STONE, STONE, STONE, LAVA],
+    [STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE],
+    [LAVA, LAVA, LAVA, LAVA, LAVA, STONE, STONE, STONE, STONE, LAVA],
+    [LAVA, LAVA, LAVA, LAVA, LAVA, LAVA, LAVA, LAVA, STONE, LAVA]
+]
+
+dungeon_mid = [
+    [DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON],
+    [DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, STONE, STONE, STONE, DUNGEON, DUNGEON],
+    [STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE],
+    [DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, STONE, STONE, STONE, DUNGEON, DUNGEON],
+    [DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON]
+]
+
+dungeon_entry = [
     [DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, STONE, DUNGEON, DUNGEON, DUNGEON],
     [DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, DUNGEON, STONE, DUNGEON, DUNGEON, DUNGEON],
     [STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE, STONE],
@@ -70,6 +89,6 @@ while True:
 
     for row in range(MAPHEIGHT):
         for column in range(MAPWIDTH):
-            DISPLAYSURF.blit(colors[road[row][column]], (column*TILESIZE, row*TILESIZE))
+            DISPLAYSURF.blit(colors[tilemap[row][column]], (column*TILESIZE, row*TILESIZE))
 
         pygame.display.update()

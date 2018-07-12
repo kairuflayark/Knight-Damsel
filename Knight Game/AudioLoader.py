@@ -41,3 +41,11 @@ def loadMusic(path):
     if path not in musicTracks:
         musicTracks[path] = pygame.mixer.music.load(path)
     return musicTracks[path]
+
+"""
+def playMusic(playSong):
+    global songs
+    if song in songs:
+        if song == playSong"""
+
+
