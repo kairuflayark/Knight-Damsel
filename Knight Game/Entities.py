@@ -1,5 +1,6 @@
 import os
 import pygame
+import Graphics
 
 class Entitiy(object):
     def __init__(self):
@@ -26,7 +27,7 @@ class Player(Entitiy):#the player
 
     def __init__(self):
         super(George, self).__init__()
-        self.sprite = graphics.load(
+        self.sprite = Graphics.load(
             os.path.join("Assets/nobbynobbs.png")
             )
         self.frame = self.frames["down"][0]
@@ -82,7 +83,7 @@ class King(Entitiy):#the king
 
     def __init__(self):
         super(George, self).__init__()
-        self.sprite = graphics.load(
+        self.sprite = Graphics.load(
             os.path.join("Assets/king.png")
             )
         self.frame = self.frames["down"][0]
@@ -111,7 +112,7 @@ class Vizzi(Entitiy):#the fake villan
 
     def __init__(self):
         super(George, self).__init__()
-        self.sprite = graphics.load(
+        self.sprite = Graphics.load(
             os.path.join("Assets/Vizzi.png")
             )
         self.frame = self.frames["down"][0]
@@ -140,7 +141,7 @@ class Charles(Entitiy):#the other knight
 
     def __init__(self):
         super(George, self).__init__()
-        self.sprite = graphics.load(
+        self.sprite = Graphics.load(
             os.path.join("Assets/charles.png")
             )
         self.frame = self.frames["down"][0]
@@ -169,7 +170,7 @@ class Princess(Entitiy):#Princess
 
     def __init__(self):
         super(George, self).__init__()
-        self.sprite = graphics.load(
+        self.sprite = Graphics.load(
             os.path.join("Assets/princess.png")
             )
         self.frame = self.frames["down"][0]
@@ -199,7 +200,7 @@ class Dragon(Entitiy):#female villan
 
     def __init__(self):
         super(Dragon, self).__init__()
-        self.sprite = graphics.load(
+        self.sprite = Graphics.load(
             os.path.join("Assets/dragon.png")
             )
         self.frame = self.frames["down"][0]
@@ -230,7 +231,7 @@ class Wizard(Entitiy):#wizard?
 
     def __init__(self):
         super(George, self).__init__()
-        self.sprite = graphics.load(
+        self.sprite = Graphics.load(
             os.path.join("Assets/wizard.png")
             )
         self.frame = self.frames["down"][0]
@@ -245,5 +246,25 @@ class Wizard(Entitiy):#wizard?
         self.frame_num = (self.frame_num + self.speed * .25)%4
         self.frame =  self.frames[self.facing][self.frame_num]
 
-        
-            
+
+
+
+class displayArrow():
+    def __init__(self, screen, visible, decision):
+        self.sprite = Graphics.load(
+            os.path.join("Assets/pointer.png")
+        )
+        self.frame = None
+        self.screen = screen
+        if decision == 0:
+            frame = [8, 452]
+        elif decision == 1:
+            frame = [2, 432]
+        elif decision == 2:
+            frame = [2, 432]
+        if visible == 1:
+            self.screen.blit(self.sprite, (frame[0], frame[1]))
+
+
+
+
