@@ -8,12 +8,12 @@ soundTracks = {}
 musicTracks = {}
   
 #for music
-def addMusic(sound):
+def addMusic(song):
     global songs
     if song not in songs:
         songs.append(song)
 
-def removeMusic(sound):
+def removeMusic(song):
     global songs
     if song in songs:
         songs.remove(song)
