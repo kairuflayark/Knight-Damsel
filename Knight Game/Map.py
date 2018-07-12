@@ -17,7 +17,7 @@ BUSH = 10
 LAVA = 11
 
 
-colors = {
+tiles = {
     DIRT: pygame.image.load('Tiles/dirt.png'),
     GRASS: pygame.image.load('Tiles/grass.png'),
     WATER: pygame.image.load('Tiles/water.png'),
@@ -89,6 +89,6 @@ while True:
 
     for row in range(MAPHEIGHT):
         for column in range(MAPWIDTH):
-            DISPLAYSURF.blit(colors[tilemap[row][column]], (column*TILESIZE, row*TILESIZE))
+            DISPLAYSURF.blit(tiles[tilemap[row][column]], (column * TILESIZE, row * TILESIZE))
 
         pygame.display.update()
