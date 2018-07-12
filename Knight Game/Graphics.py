@@ -38,9 +38,13 @@ def render():
     screen.fill((255,255,255))#black
     #screen.blit(background, (0,0))#load backgroud
     
-    for tile in tileMap:#load map first
-        screen.blit(tile.sprite, (tile.x, tile.y), tile.frame)
+    #for tile in tileMap:#load map first
+    #    screen.blit(tile.sprite, (tile.x, tile.y), tile.frame)
 
+    #for row in range(Map.MAPHEIGHT):
+    #    for column in range(Map.MAPWIDTH):
+    #        screen.blit(Map.tiles[Map.tilemap[row][column]], (column * Map.TILESIZE, row * Map.TILESIZE))
+    Map.displayMap(Events.currentRoom, screen)
         
     for sprite in sprites:#load entities
         screen.blit(sprite.sprite, (sprite.x, sprite.y), sprite.frame)

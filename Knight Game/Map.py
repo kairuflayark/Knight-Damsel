@@ -82,6 +82,34 @@ MAPHEIGHT = 5
 
 
 
+dispMap(mapNum, screen):
+    global kings_chamber, road, tilemap, dungeon_entry, dungeon_mid
+    currentMap = []
+    if mapNum == 0:
+        currentMap = kings_chamber
+    elif mapNum == 1:
+        currentMap = road
+    elif mapNum == 2:
+        currentMap = dungeon_entry
+    elif mapNum == 3:
+        currentMap = dungeon_mid
+    elif mapNum == 4:
+        currentMap = dungeon_mid
+    elif mapNum == 5:
+        currentMap = tilemap
+    elif mapNum == 6:
+        currentMap = tilemap  
+    #so on
+
+    #print room
+    for row in range(MAPHEIGHT):
+        for column in range(MAPWIDTH):
+            screen.blit(tiles[tilemap[row][column]], (column * TILESIZE, row * TILESIZE))
+
+        
+
+
+"""
 pygame.init()
 DISPLAYSURF = pygame.display.set_mode((MAPWIDTH*TILESIZE, MAPHEIGHT*TILESIZE))
 
@@ -97,3 +125,4 @@ while True:
 
         pygame.display.update()
 
+"""
