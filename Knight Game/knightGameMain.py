@@ -18,6 +18,7 @@ import Events
 #####INITIALIZATION#####
 pygame.init()
 screenRez = ((400,300))
+Plot = Events.Plot()
 #//screen = pygame.display.set_mode((800,600))
 #background = load image here
 Graphics.init(screenRez)
@@ -34,6 +35,7 @@ def quit(e):
         run = False
 Events.register(pygame.QUIT, quit)
 Events.register(pygame.KEYUP, quit)
+
 #Events.register(pygame.KEYDOWN, player.key_handler)
 #Events.register(pygame.KEYUP, player.key_handler)
 
@@ -50,11 +52,11 @@ while run:
 
     ####Events First
     Events.update()
-   
+    Events.register(pygame.KEYDOWN, Plot.key_handler)
     ####Physics Second
 
     ####Physics Third
-    Graphics.render()
+    Graphics.render(Plot)
 
     #//michael.drawScreen(screen) #// ONLY A PLACEHOLDER FOR TESTING. REPLACE WITH MAP RENDERING.
     #//michael.drawTextBox(screen)

@@ -257,11 +257,11 @@ class displayArrow():
         self.frame = None
         self.screen = screen
         if decision == 0:
-            frame = [8, 452]
+            frame = [8, 197]
         elif decision == 1:
-            frame = [2, 432]
+            frame = [2, 212]
         elif decision == 2:
-            frame = [2, 432]
+            frame = [2, 228]
         if visible == 1:
             self.screen.blit(self.sprite, (frame[0], frame[1]))
 

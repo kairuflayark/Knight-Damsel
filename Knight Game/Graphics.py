@@ -34,7 +34,7 @@ def remove(sprite):
         sprites.remove(sprite)
         
         
-def render():
+def render(Plot):
     global screen, background
     screen.fill((255,255,255))#black
     #screen.blit(background, (0,0))#load backgroud
@@ -45,7 +45,7 @@ def render():
     #for row in range(Map.MAPHEIGHT):
     #    for column in range(Map.MAPWIDTH):
     #        screen.blit(Map.tiles[Map.tilemap[row][column]], (column * Map.TILESIZE, row * Map.TILESIZE))
-    Map.displayMap(Events.Plot().currentRoom(), screen)
+    Map.displayMap(Plot.currentRoom(), screen)
         
     for sprite in sprites:#load entities
         screen.blit(sprite.sprite, (sprite.x, sprite.y), sprite.frame)
@@ -53,10 +53,10 @@ def render():
 
     #IF textbox load textbox
     michael.drawTextBox(screen)
-    michael.drawText(Events.Plot.currentText(Events.Plot()), screen)
+    michael.drawText(Plot.currentText(), screen)
         #if textbox:
             #print("There is a text box!")
-    Entities.displayArrow(screen, 1, 0)
+    Entities.displayArrow(screen, Plot.currentState, Events.Plot().decision)
 
     pygame.display.flip()#print to screen
     

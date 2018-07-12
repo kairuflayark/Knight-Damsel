@@ -42,11 +42,11 @@ class Plot(object):
         self.isAlive = True
 
         self.currentEvent = 0
-        self.currentState = 1
+        self.currentState = 0
         self.decision = 0
 
 
-    def updateplot(self, event, value):
+    def updateDecision(self, event, value):
         if (self.king == 2 and self.vizzi == 2) or (self.king == 1 and (self.charles != 3)):
             self.kingBoss = True
         if self.charles != 1:
@@ -85,18 +85,47 @@ class Plot(object):
                 self.isAlive = False
 
     def currentText(self):
-        return text.getText(self.currentEvent, self.currentState, self.decision)
+        return text.getText(self.currentEvent, self.currentState, self.getDecision())
 
     def currentRoom(self):
         return self.currentEvent
-    #
-    # def key_handler(self, e):
-    #         if e.type == pygame.KEYDOWN:
-    #             if e.key == pygame.K_KP_ENTER:
-    #
-    #
-    #
+
+    def currentState(self):
+        return self.currentState
+
+    def getDecision(self):
+        if self.currentEvent == 0:
+            return self.king
+        if self.currentEvent == 1:
+            return self.vizzi
+        if self.currentEvent == 2:
+            return self.charles
+        if self.currentEvent == 3:
+            return self.dragon
+        if self.currentEvent == 4:
+            return self.wizard
+        if self.currentEvent == 5:
+            return self.villain
+        if self.currentEvent == 6:
+            return self.princess
 
 
+    def key_handler(self, e):
+        print(self.currentState)
+        if e.type == pygame.KEYDOWN:
+            print("down")
+            if e.key == pygame.K_RETURN:
+                print('enter')
+                if self.currentState == 0:
+                    print('state ')
+                    self.currentState = 1
+                    print(self.currentState)
+            if self.currentState == 1:
+                if e.key == pygame.K_DOWN and self.decision < len(self.currentText()):
+                    self.decision += 1
+                elif e.key == pygame.K_UP and self.decision > 0:
+                    self.decision -= 1
+
+        print(self.currentText())
 
 
