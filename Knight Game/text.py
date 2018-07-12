@@ -109,9 +109,9 @@ class Wizard_Text(Text):
         self.decision = [["Bluff your way past"],
                          ["Kick him into the Cauldron"],
                          ["Fight"]]
-        self.result = [[[""]],
-                       [["You hurry down the Corridor"]],
-                       [[" "]]]
+        self.result = [[["You fail the check and get fried by lightning"]],
+                       [["Caught by surprise he topples into the cauldron"]],
+                       [["After a short battle you continue onwards"]]]
 
     def getIntro(self):
         return self.intro
@@ -157,8 +157,8 @@ class Princess_text(Text):
                             [["Explain your actions"],["Kill him!"]
 
                           ]]
-        self.result = [[[""],
-                       [["You hurry down the Corridor"]]]]
+        self.result = [[[" "]],
+                       [["victor"]]]
 
     def getIntro(self):
         return self.intro[0]

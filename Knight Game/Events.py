@@ -1,11 +1,11 @@
 # import pygame
 import text
+import Map
 
 
 
 class Plot(object):
     def __init__(self):
-        self.Event = 0
         # king 1 = talked to king
         # King 2 = left note
         # king 3 = Headed right off
@@ -21,8 +21,8 @@ class Plot(object):
         self.princess = None
         self.isAlive = True
 
-        self.currentEvent = 6
-        self.currentState = 2
+        self.currentEvent = 0
+        self.currentState = 1
         self.decision = 0
 
 
@@ -71,6 +71,9 @@ class Plot(object):
         #     if e.type == pygame.KEYDOWN:
         #         if e.key == pygame.K_KP_ENTER:
 
+    def currentRoom(self):
+        currentRoom = None
+        if self
 
 
 
