@@ -2,4 +2,4 @@ rig story progression
 
 animate scenes
 
-rig music
+rig music WITH game
