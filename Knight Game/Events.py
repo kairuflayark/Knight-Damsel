@@ -111,17 +111,21 @@ class Plot(object):
 
 
     def key_handler(self, e):
-        print(self.currentState)
+        print(self.decision)
         if e.type == pygame.KEYDOWN:
             print("down")
             if e.key == pygame.K_RETURN:
-                print('enter')
                 if self.currentState == 0:
-                    print('state ')
                     self.currentState = 1
-                    print(self.currentState)
+                elif self.currentState == 1:
+                    self.updateDecision(self.currentEvent, self.decision)
+                    self.currentState = 2
+                elif self.currentState == 2:
+                    self.currentEvent += 1
+                    self.currentState = 0
+                    self.decision = 0
             if self.currentState == 1:
-                if e.key == pygame.K_DOWN and self.decision < len(self.currentText()):
+                if e.key == pygame.K_DOWN and self.decision < (len(self.currentText()) - 1):
                     self.decision += 1
                 elif e.key == pygame.K_UP and self.decision > 0:
                     self.decision -= 1

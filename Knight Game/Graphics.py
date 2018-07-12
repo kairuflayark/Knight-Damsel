@@ -56,7 +56,7 @@ def render(Plot):
     michael.drawText(Plot.currentText(), screen)
         #if textbox:
             #print("There is a text box!")
-    Entities.displayArrow(screen, Plot.currentState, Events.Plot().decision)
+    Entities.displayArrow(screen, Plot.currentState, Plot.decision)
 
     pygame.display.flip()#print to screen
     
