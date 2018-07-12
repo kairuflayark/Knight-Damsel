@@ -1,4 +1,5 @@
 import pygame
+import time
 
 pygame.mixer.init()
 
@@ -49,3 +50,10 @@ def playMusic(playSong):
             playSong.play()
 
 
+adventure = pygame.mixer.Sound("Assets/Sounds/adventure.ogg")
+
+adventure.play(-1)
+
+time.sleep(30)
+
+pygame.quit()
