@@ -6,14 +6,14 @@ pygame.display.set_mode((10, 10))
 
 pygame.mixer.init()
 
-coin = pygame.mixer.Sound("Thwack.wav")
+#coin = pygame.mixer.Sound("Thwack.wav")
 # coin = pygame.mixer.Sound("Rainy.ogg")
-pygame.mixer.music.load("TheLoomingBattle.OGG")
-pygame.mixer.music.play()
+#pygame.mixer.music.load("TheLoomingBattle.OGG")
+#pygame.mixer.music.play()
+adventure = pygame.mixer.Sound("TheLoomingBattle.ogg")
 
-
-
-coin.play()
+adventure.play()
+#coin.play()
 
 time.sleep(30)
 
