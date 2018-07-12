@@ -1,7 +1,6 @@
 import pygame
 
 import michael
-import text
 import Events
 
 #import Map

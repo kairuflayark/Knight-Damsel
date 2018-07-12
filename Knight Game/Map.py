@@ -1,6 +1,9 @@
 import pygame
 import sys
 from pygame.locals import *
+import Events
+
+
 
 
 DIRT = 0
@@ -78,6 +81,20 @@ MAPWIDTH = 10
 MAPHEIGHT = 5
 
 
+def currentRoom():
+    room = Events.Plot().currentRoom()
+    if room == 0:
+        return kings_chamber
+    elif room == 1:
+        return road
+    elif room == 2:
+        return dungeon_entry
+    elif room == 3:
+        return dungeon_mid
+    elif room == 4:
+        return dungeon_mid
+
+
 pygame.init()
 DISPLAYSURF = pygame.display.set_mode((MAPWIDTH*TILESIZE, MAPHEIGHT*TILESIZE))
 
@@ -92,3 +109,4 @@ while True:
             DISPLAYSURF.blit(tiles[tilemap[row][column]], (column * TILESIZE, row * TILESIZE))
 
         pygame.display.update()
+
