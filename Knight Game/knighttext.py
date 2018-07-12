@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Text(object):
     def __init__(self):
         self.num_choice = None
@@ -5,12 +8,16 @@ class Text(object):
         self.decision = None
         self.result = None
 
-    def getText(self, value):
-        return self.result[value]
+    def getIntro(self):
+        return self.intro
 
 
 class King_text(Text):
+
+    intro: List[str]
+
     def __init__(self):
+        super().__init__()
         self.num_choice = 3
         self.intro = ["What should I do now?"]
         self.decision = ["Tell the King",
@@ -19,6 +26,8 @@ class King_text(Text):
         self.result = [["He sends you off with his trust"],
                        ["With the note written you leave"],
                        ["Saddling your horse you leave"]]
+    def getIntro(self):
+        return self.intro[0]
 
     def getText(self, value):
         return self.result[value]
@@ -26,6 +35,7 @@ class King_text(Text):
 
 class Vizzi_text(Text):
     def __init__(self):
+        super().__init__()
         self.num_choice = 3
         self.intro = [ ["On the way you encounter Vizzi who was"],
                        ["running late to kidnap Christine"] ]
@@ -38,6 +48,7 @@ class Vizzi_text(Text):
 
 class Charles_text(Text):
     def __init__(self):
+        super().__init__()
         self.num_choice = 3
         self.intro = ["As you are considering whether or not to take the",
                       "left door or the right one of your fellow knights arrives"]
@@ -62,6 +73,7 @@ class Dragon_text():
 
 class Wizard_Text(Text):
     def __init__(self):
+        super().__init__()
         self.num_choice = 2
         self.intro = [ "The Room is Gloomy and a powerful mage leans over a cauldron" ]
         self.decision = ["Bluff your way past",
@@ -72,6 +84,7 @@ class Wizard_Text(Text):
 
 class Villian_Text(Text):
     def __init__(self):
+        super().__init__()
         self.num_choice = 2
         self.intro = [ "Finally you have reached the dastardly villain",
                        "beyond the door you can see the cell he",
@@ -84,6 +97,7 @@ class Villian_Text(Text):
 
 class Princess_King_text(Text):
     def __init__(self):
+        super().__init__()
         self.num_choice = 2
         self.intro = [ "After a long battle the king falls to his knees exhausted" ]
         self.decision = ["Explain your actions",
@@ -93,6 +107,7 @@ class Princess_King_text(Text):
 
 class Princess_Charles_text(Text):
     def __init__(self):
+        super().__init__()
         self.num_choice = 2
         self.intro = [ "The " ]
         self.decision = ["Bluff your way past",
@@ -103,6 +118,7 @@ class Princess_Charles_text(Text):
 
 class Princess_King_and_Charles_text(Text):
     def __init__(self):
+        super().__init__()
         self.num_choice = 2
         self.intro = [ "The " ]
         self.decision = ["Bluff your way past",
@@ -110,5 +126,11 @@ class Princess_King_and_Charles_text(Text):
                          "Fight"]
         self.result = [[""],
                        ["You hurry down the Corridor"]]
-def getText(value):
-    return decision[value]
+
+def getText(event, part):
+    text = None
+    if event == 0:
+        if part == 0:
+            text = King_text.getIntro(King_text())
+
+    return text

@@ -1,4 +1,5 @@
 import sys
+from typing import Type
 
 import pygame
 
@@ -15,13 +16,16 @@ import Entities
 
 #import knightStory    #Stores story nodes to be called
 #import knightDungeon   #Procedural room/dungeon generation system
+from knighttext import Text
 
 pygame.init()
 screen = pygame.display.set_mode((800,600))
 run = True
 
 clock = pygame.time.Clock()
+king = knighttext.getText(0,0)
 
+print(king)
 while run:
     clock.tick(30)  #30 FPS
 
@@ -30,7 +34,8 @@ while run:
 
     #Physics Second
 
-    king = knighttext.King_text.getText(knighttext.King_text(), 1)
+
+    # king = knighttext.King_text.getText(knighttext.King_text(), 1)
     #Rendering Third
     #//Graphics.render()
 
