@@ -1,5 +1,5 @@
 # import pygame
-
+import text
 
 
 
@@ -12,7 +12,6 @@ class Plot(object):
         self.king = None
         self.vizzi = None
         self.charles = None
-        self.door = None
         self.dragon = None
         self.wizard = None
         self.villain = None
@@ -21,6 +20,11 @@ class Plot(object):
         self.hasVizzi = False
         self.princess = None
         self.isAlive = True
+
+        self.currentEvent = 6
+        self.currentState = 2
+        self.decision = 0
+
 
     def updateplot(self, event, value):
         if (self.king == 2 and self.vizzi == 2) or (self.king == 1 and (self.charles != 3)):
@@ -36,8 +40,6 @@ class Plot(object):
         elif event == 2:
             self.charles = value
         elif event == 3:
-            self.door = value
-        elif event == 4 and self.door == 0:
             if value == 2:
                 if self.hasVizzi:
                     self.dragon = 3
@@ -46,7 +48,7 @@ class Plot(object):
                     self.dragon = value
             else:
                 self.dragon = value
-        elif event == 4 and self.door == 1:
+        elif event == 4:
             self.wizard = value
             if value == 1:
                 self.isAlive = False
@@ -62,7 +64,8 @@ class Plot(object):
             if self.kingBoss and value == 2:
                 self.isAlive = False
 
-
+    def currentText(self):
+        return text.getText(self.currentEvent, self.currentState, self.decision)
 
         # def key_handler(self, e):
         #     if e.type == pygame.KEYDOWN:

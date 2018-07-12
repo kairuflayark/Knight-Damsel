@@ -27,7 +27,7 @@ class drawText():
         self.screen = screen
         i = 0
         printT = sHeight * 3/4
-        myfont = pygame.font.SysFont("monospace", 30)
+        myfont = pygame.font.SysFont("monospace", 20)
 
         for i in range(0, len(text)):
             #myfont.render([text], [anti-alias], text color(r, g, b))

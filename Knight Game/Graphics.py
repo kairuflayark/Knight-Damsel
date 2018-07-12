@@ -1,7 +1,8 @@
 import pygame
 
 import michael
-import knighttext
+import text
+import Events
 
 #import Map
 tileMap = []#tiles = Map.tiles
@@ -47,7 +48,7 @@ def render():
 
     #IF textbox load textbox
     michael.drawTextBox(screen)
-    michael.drawText(knighttext.getText(0,2,0), screen)
+    michael.drawText(Events.Plot.currentText(Events.Plot()), screen)
         #if textbox:
             #print("There is a text box!")
 

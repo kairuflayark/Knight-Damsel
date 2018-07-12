@@ -3,7 +3,7 @@ import sys
 import pygame
 
 import michael
-import knighttext
+import text
 
 
 import time
@@ -29,8 +29,8 @@ while run:
     clock.tick(30)  #30 FPS
 
     ####Events First
-
-
+    #for i in range(0, 6):
+    #    for j in range(0,2):
     ####Physics Second
 
 

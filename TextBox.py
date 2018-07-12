@@ -1,6 +1,6 @@
 import pygame
 import sys
-import knighttext
+import text
 
 white = (255,255,255)
 black = (0,0,0)
