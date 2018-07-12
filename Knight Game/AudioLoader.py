@@ -1,7 +1,7 @@
 import pygame
 import time
 
-pygame.mixer.init()
+pygame.mixer.init()#FIX MUSIC != MIXER
 
 adventure = pygame.mixer.Sound("Assets/Sounds/adventure.ogg")
 dungeon_boss = pygame.mixer.Sound("Assets/Sounds/dungeon_boss.ogg")
