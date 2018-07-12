@@ -5,8 +5,8 @@ black = (0,0,0)
 txtColor = (255, 0, 45)
 brdr = 2 #The border size of the textbox. Currently using a black border.
 
-sWidth = 800 #Width of the entire screen
-sHeight = 600 #Height of the entire screen
+sWidth = 400 #Width of the entire screen
+sHeight = 260 #Height of the entire screen
 
 class drawScreen:
     def __init__(self, screen):

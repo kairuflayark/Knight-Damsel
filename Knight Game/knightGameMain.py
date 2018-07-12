@@ -17,7 +17,7 @@ import Events
 
 #####INITIALIZATION#####
 pygame.init()
-screenRez = ((800,600))
+screenRez = ((400,300))
 #//screen = pygame.display.set_mode((800,600))
 #background = load image here
 Graphics.init(screenRez)
