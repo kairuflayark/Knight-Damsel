@@ -23,7 +23,9 @@ screenRez = ((400,300))
 Graphics.init(screenRez)
 run = True
 
-#player = Entities.Player()
+Graphics.add("Assets/nobbynobs.png") #//player sprite
+player = Entities.Player()
+
 
 def quit(e):
     global run
@@ -34,8 +36,8 @@ def quit(e):
         run = False
 Events.register(pygame.QUIT, quit)
 Events.register(pygame.KEYUP, quit)
-#Events.register(pygame.KEYDOWN, player.key_handler)
-#Events.register(pygame.KEYUP, player.key_handler)
+Events.register(pygame.KEYDOWN, player.key_handler)
+Events.register(pygame.KEYUP, player.key_handler)
 
 clock = pygame.time.Clock()
 
@@ -53,7 +55,7 @@ while run:
    
     ####Physics Second
 
-    ####Physics Third
+    ####Graphics Third
     Graphics.render()
 
     #//michael.drawScreen(screen) #// ONLY A PLACEHOLDER FOR TESTING. REPLACE WITH MAP RENDERING.
