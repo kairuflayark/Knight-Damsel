@@ -4,7 +4,7 @@ import michael
 import Events
 import Map
 
-tileMap = Map.
+tileMap = []
 
 
 
