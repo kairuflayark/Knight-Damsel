@@ -10,6 +10,7 @@ pygame.init()
 animation_test_graphics.init((800,600))
 run = True
 animation_test_graphics.background = animation_test_graphics.load("background.jpg")
+
 coin = animation_test_entities.Coin()
 animation_test_graphics.add(coin)
 

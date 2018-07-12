@@ -26,7 +26,7 @@ class Player(Entitiy):#the player
         }
 
     def __init__(self):
-        super(George, self).__init__()
+        super(Player, self).__init__()
         self.sprite = Graphics.load(
             os.path.join("Assets/nobbynobbs.png")
             )

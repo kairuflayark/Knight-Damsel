@@ -47,8 +47,8 @@ def render(Plot):
     #        screen.blit(Map.tiles[Map.tilemap[row][column]], (column * Map.TILESIZE, row * Map.TILESIZE))
     Map.displayMap(Plot.currentRoom(), screen)
         
-    for sprite in sprites:#load entities
-        screen.blit(sprite.sprite, (sprite.x, sprite.y), sprite.frame)
+    for entitiy in sprites:#load entities
+        screen.blit(entitiy.sprite, ((entitiy.x, entitiy.y)), entitiy.frame)
 
 
     #IF textbox load textbox
