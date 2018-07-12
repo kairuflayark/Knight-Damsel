@@ -2,7 +2,7 @@ import pygame
 import sys
 from pygame.locals import *
 import Events
-
+import AudioLoader
 
 
 

@@ -3,8 +3,15 @@ import time
 
 pygame.mixer.init()
 
+adventure = pygame.mixer.Sound("Assets/Sounds/adventure.ogg")
+dungeon_boss = pygame.mixer.Sound("Assets/Sounds/dungeon_boss.ogg")
+dungeon_entry = pygame.mixer.Sound("Assets/Sounds/dungeon_entry.ogg")
+epic = pygame.mixer.Sound("Assets/Sounds/epic.ogg")
+road = pygame.mixer.Sound("Assets/Sounds/road.ogg")
+soft_battle = pygame.mixer.Sound("Assets/Sounds/soft_battle.ogg")
+
 sounds = []
-songs = []
+songs = [adventure, dungeon_boss, dungeon_entry, epic, road, soft_battle]
 soundTracks = {}
 musicTracks = {}
   
@@ -49,10 +56,16 @@ def playMusic(playSong):
     if playSong in songs:
             playSong.play()
 
+playSong = songs[0]
+playMusic(playSong)
+# adventure = pygame.mixer.Sound("Assets/Sounds/adventure.ogg")
+# dungeon_boss = pygame.mixer.Sound("Assets/Sounds/dungeon_boss.ogg")
+# dungeon_entry = pygame.mixer.Sound("Assets/Sounds/dungeon_entry.ogg")
+# epic = pygame.mixer.Sound("Assets/Sounds/epic.ogg")
+# road = pygame.mixer.Sound("Assets/Sounds/road.ogg")
+# soft_battle = pygame.mixer.Sound("Assets/Sounds/soft_battle.ogg")
 
-adventure = pygame.mixer.Sound("Assets/Sounds/adventure.ogg")
-
-adventure.play(-1)
+# adventure.play(-1)
 
 time.sleep(30)
 
