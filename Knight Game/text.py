@@ -43,7 +43,7 @@ class Vizzi_text(Text):
                        ["running late to kidnap the princess for you"] ]
         self.decision = [["Kill him"],
                          ["Let him leave"],
-                         ["Leave immediately"]]
+                         ["Take him with you"]]
         self.result = [[["He dies a pitiful death"]],
                        [["He hurries away to drink away his shame"]],
                        [["For the money you paid him, he agrees to come"]]]
