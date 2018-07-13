@@ -188,7 +188,6 @@
   </component>
   <component name="RunManager" selected="Python.AudioLoader">
     <configuration name="AudioLoader" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VG_Dev-CS90R" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -199,6 +198,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="VG_Dev-CS90R" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Knight Game/AudioLoader.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -206,7 +206,6 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="TextBox" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VG_Dev-CS90R" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -217,6 +216,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="VG_Dev-CS90R" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TextBox.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -224,7 +224,6 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VG_Dev-CS90R" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -235,6 +234,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="VG_Dev-CS90R" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Animation/game.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -242,7 +242,6 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="knightGameMain" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VG_Dev-CS90R" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -253,6 +252,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="VG_Dev-CS90R" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Knight Game/knightGameMain.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -260,7 +260,6 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="knighttext" type="PythonConfigurationType" factoryName="Python">
-      <module name="VG_Dev-CS90R" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -271,6 +270,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="VG_Dev-CS90R" />
       <option name="SCRIPT_NAME" value="C:\Users\Kairuf\PycharmProjects\KnightGame\Knight Game\text.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -278,7 +278,6 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="sound" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VG_Dev-CS90R" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -289,29 +288,33 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="VG_Dev-CS90R" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Animation/sound.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list>
-      <item itemvalue="Python.knighttext" />
-      <item itemvalue="Python.game" />
-      <item itemvalue="Python.TextBox" />
-      <item itemvalue="Python.knightGameMain" />
-      <item itemvalue="Python.sound" />
-      <item itemvalue="Python.AudioLoader" />
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Python.knighttext" />
+      <item index="1" class="java.lang.String" itemvalue="Python.game" />
+      <item index="2" class="java.lang.String" itemvalue="Python.TextBox" />
+      <item index="3" class="java.lang.String" itemvalue="Python.knightGameMain" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sound" />
+      <item index="5" class="java.lang.String" itemvalue="Python.AudioLoader" />
     </list>
     <recent_temporary>
-      <list>
-        <item itemvalue="Python.AudioLoader" />
-        <item itemvalue="Python.knightGameMain" />
-        <item itemvalue="Python.sound" />
-        <item itemvalue="Python.TextBox" />
-        <item itemvalue="Python.game" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.AudioLoader" />
+        <item index="1" class="java.lang.String" itemvalue="Python.knightGameMain" />
+        <item index="2" class="java.lang.String" itemvalue="Python.sound" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TextBox" />
+        <item index="4" class="java.lang.String" itemvalue="Python.game" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />

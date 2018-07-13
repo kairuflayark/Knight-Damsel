@@ -28,7 +28,6 @@ player = Entities.Player()
 Graphics.add(player) #//player sprite
 
 
-
 def quit(e):
     global run
     if (e.type == pygame.KEYUP):
