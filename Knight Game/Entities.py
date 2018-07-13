@@ -42,7 +42,7 @@ class Player(Entitiy):#the player
         self.frame_num = (self.frame_num + self.speed * .25)%4
         self.frame =  self.frames[self.facing][self.frame_num]
 
-    def key_handler(self, e):
+    """def key_handler(self, e):
         if (e.type == pygame.KEYDOWN):
             if (e.key == pygame.K_UP):
                 self.velocity[1] -= self.speed
@@ -66,7 +66,7 @@ class Player(Entitiy):#the player
                 self.velocity[0] += self.speed 
             elif (e.key == pygame.K_RIGHT):
                 self.velocity[0] -= self.speed
-
+"""
         
 
 class King(Entitiy):#the king

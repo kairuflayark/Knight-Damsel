@@ -2,7 +2,7 @@ import pygame
 import sys
 from pygame.locals import *
 import Events
-
+import AudioLoader
 
 
 
@@ -104,7 +104,7 @@ def displayMap(mapNum, screen):
     #print room
     for row in range(MAPHEIGHT):
         for column in range(MAPWIDTH):
-            screen.blit(tiles[tilemap[row][column]], (column * TILESIZE, row * TILESIZE))
+            screen.blit(tiles[currentMap[row][column]], (column * TILESIZE, row * TILESIZE))
 
         
 

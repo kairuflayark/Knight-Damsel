@@ -24,8 +24,9 @@ Plot = Events.Plot()
 Graphics.init(screenRez)
 run = True
 
-#Graphics.add("Assets/nobbynobs.png") #//player sprite
-#player = Entities.Player()
+player = Entities.Player()
+Graphics.add(player) #//player sprite
+
 
 
 def quit(e):
@@ -44,10 +45,6 @@ Events.register(pygame.KEYUP, quit)
 clock = pygame.time.Clock()
 
 
-
-
-
-
 #####GAME LOOP#####
 while run:
     clock.tick(30)  #30 FPS
@@ -57,13 +54,8 @@ while run:
     Events.register(pygame.KEYDOWN, Plot.key_handler)
     ####Physics Second
 
-    ####Physics Third
+    ####Graphics Third
     Graphics.render(Plot)
-
-    #//michael.drawScreen(screen) #// ONLY A PLACEHOLDER FOR TESTING. REPLACE WITH MAP RENDERING.
-    #//michael.drawTextBox(screen)
-    #//michael.drawText(king, screen)
-    #//pygame.display.flip()
 
     
 pygame.quit()
