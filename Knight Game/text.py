@@ -18,7 +18,6 @@ class King_text(Text):
 
     def __init__(self):
         super().__init__()
-        self.num_choice = 3
         self.intro = [["What should I do now?"]]
         self.decision = [["Tell the King"],
                          ["Leave a note"],
@@ -38,7 +37,6 @@ class King_text(Text):
 class Vizzi_text(Text):
     def __init__(self):
         super().__init__()
-        self.num_choice = 3
         self.intro = [ ["On the way you encounter Vizzi who was"],
                        ["running late to kidnap the princess for you"] ]
         self.decision = [["Kill him"],
@@ -60,15 +58,14 @@ class Vizzi_text(Text):
 class Charles_text(Text):
     def __init__(self):
         super().__init__()
-        self.num_choice = 3
-        self.intro = [["As you are considering whether or not to take the"],
-                      ["left door or the right one of your fellow knights arrives"]]
+        self.intro = [["As you are considering whether or not to take"], ["the left door or the right one of your fellow"],
+                      [" knights arrives"]]
         self.decision = [["Stab him in the back"],
                          ["Try and convince him to leave"],
                          ["Make it into a competition"]]
-        self.result = [[["He falls and his body lies resting on the floor"]],
-                       [["With a mighty clash of swords he collapses bloodied and exhausted"]],
-                       [["He agrees and tells you to choose which door to go through"]]]
+        self.result = [[["He falls and his body lies resting on"],["the floor"]],
+                       [["With a mighty clash of swords he collapses"], ["bloodied and exhausted"]],
+                       [["He agrees and tells you to choose which"],["door to go through"]]]
 
     def getIntro(self):
         return self.intro
@@ -82,15 +79,14 @@ class Charles_text(Text):
 
 class Dragon_text():
     def __init__(self):
-        self.num_choice = 2
-        self.intro = [ ["Standing beyond the door is a Battle scared warrior woman"] ]
+        self.intro = [ ["Standing beyond the door is a Battle scared"],["warrior woman"] ]
         self.decision = [["Talk it out"],
                          ["Fight"],
                          ["Flirt"]]
         self.result = [[["Moved by your plea she allows you to pass"]],
-                       [["The Dragoness roasts you"]],
-                       [["She ignores your actions and you die a bloody death"]],
-                       [["Vizzi begins to flirt with her and you escape past her"]]]
+                       [["The dragoness roasts you"]],
+                       [["She ignores your words and you die"],[" a bloody death"]],
+                       [["Vizzi begins to flirt with her and "],[" you escape past her"]]]
 
     def getIntro(self):
         return self.intro
@@ -104,14 +100,13 @@ class Dragon_text():
 class Wizard_Text(Text):
     def __init__(self):
         super().__init__()
-        self.num_choice = 2
-        self.intro = [ ["The Room is Gloomy and a powerful mage leans over a cauldron"] ]
+        self.intro = [ ["The Room is Gloomy and a powerful mage"],["leans over a cauldron"] ]
         self.decision = [["Bluff your way past"],
                          ["Kick him into the Cauldron"],
                          ["Fight"]]
-        self.result = [[["You fail the check and get fried by lightning"]],
-                       [["Caught by surprise he topples into the cauldron"]],
-                       [["After a short battle you continue onwards"]]]
+        self.result = [[["You fail the check and get fried "],["by lightning"]],
+                       [["Caught by surprise he topples into"],["the cauldron"]],
+                       [["After a short battle you continue"],["onwards"]]]
 
     def getIntro(self):
         return self.intro
@@ -125,16 +120,15 @@ class Wizard_Text(Text):
 class Villian_Text(Text):
     def __init__(self):
         super().__init__()
-        self.num_choice = 2
-        self.intro = [ ["Finally you have reached the dastardly villain"],
-                       ["beyond the door you can see the cell he"],
-                        ["is holding the Princess in."]]
+        self.intro = [ ["Finally you have reached the dastardly"],["villain beyond the door you "],
+                       ["can see the cell he is holding "],["the Princess in."]]
         self.decision = [["Fight"],
                          ["Fight"],
                          ["and Fight"]]
-        self.result = [[["The Other knight bursts through the door angry that his plans", " to kidnap the Princess were foiled"]],
-                       [["The King enters through the door having found out", "that you had arranged to have his daughter kidnapped."]],
-                       [["The King and Charles Burst through the door in agreement that you need to die"]]]
+        self.result = [[["The Other knight bursts through the door"], ["angry that his plans to kidnap"], ["the Princess were foiled"]],
+                       [["The King enters through the door having"], ["found out that you had arranged"], ["to have his daughter kidnapped."]],
+                       [["The King and Charles Burst through,"], ["the door in agreement that you"], ["need to die"]],
+                       [["Good End"]]]
 
     def getIntro(self):
         return self.intro
@@ -146,19 +140,48 @@ class Villian_Text(Text):
         return self.result[value]
 
 
-class Princess_text(Text):
+class Princess0_text(Text):
+    def __init__(self):
+        super().__init__()
+        self.intro = [[["After a long battle Charles'"], ["sword clatters to the ground."]]]
+        self.decision = [[["Finish him"], ["Spare his life."]]]
+        self.result = [[["Good End "]],
+                       [["Ride off into sunset"]]]
+
+    def getIntro(self):
+        return self.intro[0]
+
+    def getDecision(self):
+        return self.decision[0]
+
+    def getResult(self, value):
+        return self.result[value]
+
+class Princess1_text(Text):
+    def __init__(self):
+        super().__init__()
+        self.intro = [[["After a long battle the king"],[" falls to his knees exhausted"]]]
+        self.decision = [[["Explain your actions"],["Kill him!"]]]
+        self.result = [[[" Good End "]],
+                       [["Princess stabs you in the back."]]]
+
+    def getIntro(self):
+        return self.intro[0]
+
+    def getDecision(self):
+        return self.decision[0]
+
+    def getResult(self, value):
+        return self.result[value]
+
+class Princess2_text(Text):
     def __init__(self):
         super().__init__()
         self.num_choice = 2
-        self.intro = [[["After a long battle Charles' sword clatters to the ground."]],
-                      [["After a long battle the king falls to his knees exhausted"]],
-                      [["after a long battle they both fall"]]]
-        self.decision = [[["Finish him"], ["Spare his life."]],
-                            [["Explain your actions"],["Kill him!"]
-
-                          ]]
-        self.result = [[[" "]],
-                       [["victor"]]]
+        self.intro = [[["After a long battle they both fall to you"]]]
+        self.decision = [[["Explain your actions"],["Kill them!"]]]
+        self.result = [[["Good End"]],
+                       [["Stabbed in the back X_X"]]]
 
     def getIntro(self):
         return self.intro[0]
@@ -216,9 +239,25 @@ def getText(event, part, decision):
             text = Villian_Text.getResult(Villian_Text(), decision)
     if event == 6:
         if part == 0:
-            text = Princess_text.getIntro(Princess_text())
+            text = Princess0_text.getIntro(Princess0_text())
         elif part == 1:
-            text = Princess_text.getDecision(Princess_text())
+            text = Princess0_text.getDecision(Princess0_text())
         else:
-            text = Princess_text.getResult(Princess_text(), decision)
+            text = Princess0_text.getResult(Princess0_text(), decision)
+    if event == 7:
+        print(decision)
+        if part == 0:
+            text = Princess1_text.getIntro(Princess1_text())
+        elif part == 1:
+            text = Princess1_text.getDecision(Princess1_text())
+        else:
+            text = Princess1_text.getResult(Princess1_text(), decision)
+    if event == 8:
+        print(decision)
+        if part == 0:
+            text = Princess2_text.getIntro(Princess2_text())
+        elif part == 1:
+            text = Princess2_text.getDecision(Princess2_text())
+        else:
+            text = Princess2_text.getResult(Princess2_text(), decision)
     return text
