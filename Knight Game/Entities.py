@@ -82,7 +82,7 @@ class King(Entitiy):#the king
         }
 
     def __init__(self):
-        super(George, self).__init__()
+        super(King, self).__init__()
         self.sprite = Graphics.load(
             os.path.join("Assets/king.png")
             )
@@ -111,7 +111,7 @@ class Vizzi(Entitiy):#the fake villan
         }
 
     def __init__(self):
-        super(George, self).__init__()
+        super(Vizzi, self).__init__()
         self.sprite = Graphics.load(
             os.path.join("Assets/Vizzi.png")
             )
@@ -140,7 +140,7 @@ class Charles(Entitiy):#the other knight
         }
 
     def __init__(self):
-        super(George, self).__init__()
+        super(Charles, self).__init__()
         self.sprite = Graphics.load(
             os.path.join("Assets/charles.png")
             )
@@ -169,7 +169,7 @@ class Princess(Entitiy):#Princess
         }
 
     def __init__(self):
-        super(George, self).__init__()
+        super(Princess, self).__init__()
         self.sprite = Graphics.load(
             os.path.join("Assets/princess.png")
             )
@@ -230,7 +230,7 @@ class Wizard(Entitiy):#wizard?
         }
 
     def __init__(self):
-        super(George, self).__init__()
+        super(Wizard, self).__init__()
         self.sprite = Graphics.load(
             os.path.join("Assets/wizard.png")
             )
@@ -240,12 +240,41 @@ class Wizard(Entitiy):#wizard?
         self.speed = 0.5
         self.velocity = [0,0]
 
+
     def update(self):
         self.x += self.velocity[0]
         self.y += self.velocity[1]
         self.frame_num = (self.frame_num + self.speed * .25)%4
         self.frame =  self.frames[self.facing][self.frame_num]
 
+class Villain(Entitiy):#Villain
+    frames = {
+        "up": [(3 * 32, y * 48, 32, 48)
+               for y in range(4)],  # row 4
+        "down": [(0, y * 48, 32, 48)
+                 for y in range(4)],  # row 1
+        "left": [(1 * 32, y * 48, 32, 48)
+                 for y in range(4)],  # row 2
+        "right": [(2 * 32, y * 48, 32, 48)
+                  for y in range(4)],  # row 3
+    }
+
+    def __init__(self):
+        super(Villain, self).__init__()
+        self.sprite = Graphics.load(
+            os.path.join("Assets/devil.png")
+        )
+        self.frame = self.frames["down"][0]
+        self.frame_num = 0
+        self.facing = "down"
+        self.speed = 0.5
+        self.velocity = [0, 0]
+
+    def update(self):
+        self.x += self.velocity[0]
+        self.y += self.velocity[1]
+        self.frame_num = (self.frame_num + self.speed * .25) % 4
+        self.frame = self.frames[self.facing][self.frame_num]
 
 
 
