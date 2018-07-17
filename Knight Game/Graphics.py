@@ -75,7 +75,6 @@ def displaySprite(mapNum):
     dragon = Entities.Dragon()
     wizard = Entities.Wizard()
     villain = Entities.Villain()
-    print(sprites)
     if mapNum == 0:
         player.x = (40 * 4)
         player.y = (40 * 2) - 15
