@@ -46,7 +46,8 @@ def render(Plot):
     #    for column in range(Map.MAPWIDTH):
     #        screen.blit(Map.tiles[Map.tilemap[row][column]], (column * Map.TILESIZE, row * Map.TILESIZE))
     Map.displayMap(Plot.currentRoom(), screen)
-        
+    displaySprite(Plot.currentRoom())
+
     for entitiy in sprites:#load entities
         screen.blit(entitiy.sprite, ((entitiy.x, entitiy.y)), entitiy.frame)
 
@@ -65,3 +66,64 @@ def load(path):
     if path not in images:
         images[path] = pygame.image.load(path)
     return images[path]
+
+def displaySprite(mapNum):
+    player = Entities.Player()
+    king = Entities.King()
+    vizzi = Entities.Vizzi()
+    charles = Entities.Charles()
+    dragon = Entities.Dragon()
+    wizard = Entities.Wizard()
+    villain = Entities.Villain()
+    print(sprites)
+    if mapNum == 0:
+        player.x = (40 * 4)
+        player.y = (40 * 2) - 15
+        remove(player)
+        add(player)  # //player sprite
+        king.x = (40 * 9)
+        king.y = (40 * 2) - 15
+        remove(king)
+        add(king)
+    elif mapNum == 1:
+        #remove(king) #// Can't seem to get this function to work
+        king.y += 1000 #// Moving them off-screen instead of removing them
+        vizzi.x = (40 * 9)
+        vizzi.y = (40 * 2) - 15
+        remove(vizzi)
+        add(vizzi)
+    elif mapNum == 2:
+        #remove(vizzi)
+        vizzi.y += 1000
+        charles.x = (40 * 9)
+        charles.y = (40 * 2) - 15
+        remove(charles)
+        add(charles)
+    elif mapNum == 3:
+        #remove(charles)
+        charles.y += 1000
+        dragon.x = (40 * 9)
+        dragon.y = (40 * 2) - 15
+        remove(dragon)
+        add(dragon)
+    elif mapNum == 4:
+        #remove(dragon)
+        dragon.y += 1000
+        wizard.x = (40 * 9)
+        wizard.y = (40 * 2) - 15
+        remove(wizard)
+        add(wizard)
+    elif mapNum == 5:
+        #remove(wizard)
+        wizard.y += 1000
+        villain.x = (40 * 9)
+        villain.y = (40 * 2) - 15
+        remove(villain)
+        add(villain)
+    elif mapNum >= 6:
+        #remove(wizard)
+        wizard.y += 1000
+        villain.x = (40 * 9)
+        villain.y = (40 * 2) - 15
+        remove(villain)
+        add(villain)

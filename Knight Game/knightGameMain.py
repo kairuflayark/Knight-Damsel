@@ -24,6 +24,16 @@ Plot = Events.Plot()
 Graphics.init(screenRez)
 run = True
 
+
+#player = Entities.Player()
+#player.x = (40 * 4)
+#player.y = (40 * 2) - 15
+#Graphics.add(player) #//player sprite
+#king = Entities.King()
+#king.x = (40 * 9)
+#king.y = (40 * 2) - 15
+#Graphics.add(king)
+
 #king = Entities.King()
 #Graphics.add(king)
 #vizzi = Entities.Vizzi()
@@ -36,12 +46,6 @@ run = True
 #Graphics.add(dragon)
 #king = Entities.Wizard()
 #Graphics.add(wizard)
-
-player = Entities.Player()
-Graphics.add(player) #//player sprite
-player.x = 90
-player.y = 70
-
 
 def quit(e):
     global run
