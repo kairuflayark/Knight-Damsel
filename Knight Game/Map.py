@@ -97,7 +97,7 @@ def displayMap(mapNum, screen):
         currentMap = dungeon_mid
     elif mapNum == 5:
         currentMap = tilemap
-    elif mapNum == 6:
+    elif mapNum >= 6:
         currentMap = tilemap  
     #so on
 
