@@ -24,8 +24,23 @@ Plot = Events.Plot()
 Graphics.init(screenRez)
 run = True
 
+#king = Entities.King()
+#Graphics.add(king)
+#vizzi = Entities.Vizzi()
+#Graphics.add(vizzi)
+#charles = Entities.Charles()
+#Graphics.add(charles)
+#princess = Entities.Princess()
+#Graphics.add(princess)
+#dragon = Entities.Dragon()
+#Graphics.add(dragon)
+#king = Entities.Wizard()
+#Graphics.add(wizard)
+
 player = Entities.Player()
 Graphics.add(player) #//player sprite
+player.x = 90
+player.y = 70
 
 
 def quit(e):
