@@ -56,7 +56,12 @@ def playMusic(playSong):
     if playSong in songs:
             playSong.play(-1)
 
-playSong = songs[0]
+def stopMusic():
+    for i in range(len(songs)):
+        pygame.mixer.Sound.stop(songs[i])
+
+
+playSong = songs[3]
 playMusic(playSong)
 # adventure = pygame.mixer.Sound("Assets/Sounds/adventure.ogg")
 # dungeon_boss = pygame.mixer.Sound("Assets/Sounds/dungeon_boss.ogg")

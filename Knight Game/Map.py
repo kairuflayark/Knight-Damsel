@@ -80,25 +80,71 @@ TILESIZE = 40
 MAPWIDTH = 10
 MAPHEIGHT = 5
 
-
+king_play = True
+road_play = False
+dungeon_entry_play = False
+dungeon_mid_play = False
+tilemap_play = False
 
 def displayMap(mapNum, screen):
-    global kings_chamber, road, tilemap, dungeon_entry, dungeon_mid
+    global kings_chamber, road, tilemap, dungeon_entry, dungeon_mid, king_play, road_play, dungeon_entry_play, dungeon_mid_play, tilemap_play
     currentMap = []
     if mapNum == 0:
         currentMap = kings_chamber
     elif mapNum == 1:
+        if king_play:
+            AudioLoader.stopMusic()
+            king_play = False
         currentMap = road
+        if not road_play:
+            AudioLoader.playSong = AudioLoader.songs[0]
+            AudioLoader.playMusic(AudioLoader.playSong)
+            road_play = True
     elif mapNum == 2:
+        if road_play:
+            AudioLoader.stopMusic()
+            road_play = False
         currentMap = dungeon_entry
+        if not dungeon_entry_play:
+            AudioLoader.playSong = AudioLoader.songs[5]
+            AudioLoader.playMusic(AudioLoader.playSong)
+            dungeon_entry_play = True
     elif mapNum == 3:
+        if dungeon_entry_play:
+            AudioLoader.stopMusic()
+            dungeon_entry_play = False
         currentMap = dungeon_mid
+        if not dungeon_mid_play:
+            AudioLoader.playSong = AudioLoader.songs[2]
+            AudioLoader.playMusic(AudioLoader.playSong)
+            dungeon_mid_play = True
     elif mapNum == 4:
+        if dungeon_entry_play:
+            AudioLoader.stopMusic()
+            dungeon_entry_play = False
         currentMap = dungeon_mid
+        if not dungeon_mid_play:
+            AudioLoader.playSong = AudioLoader.songs[2]
+            AudioLoader.playMusic(AudioLoader.playSong)
+            dungeon_mid_play = True
     elif mapNum == 5:
+        if dungeon_mid_play:
+            AudioLoader.stopMusic()
+            dungeon_mid_play = False
         currentMap = tilemap
+        if not tilemap_play:
+            AudioLoader.playSong = AudioLoader.songs[1]
+            AudioLoader.playMusic(AudioLoader.playSong)
+            tilemap_play = True
     elif mapNum >= 6:
-        currentMap = tilemap  
+        if dungeon_mid_play:
+            AudioLoader.stopMusic()
+            dungeon_mid_play = False
+        currentMap = tilemap
+        if not tilemap_play:
+            AudioLoader.playSong = AudioLoader.songs[1]
+            AudioLoader.playMusic(AudioLoader.playSong)
+            tilemap_play = True
     #so on
 
     #print room
