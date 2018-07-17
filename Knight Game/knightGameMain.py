@@ -39,6 +39,8 @@ run = True
 
 player = Entities.Player()
 Graphics.add(player) #//player sprite
+player.x = 90
+player.y = 70
 
 
 def quit(e):
