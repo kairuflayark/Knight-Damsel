@@ -87,16 +87,6 @@ class Plot(object):
             self.princess = value
             self.isAlive = False
 
-
-    def currentText(self):
-        return text.getText(self.currentEvent, self.currentState, self.getDecision())
-
-    def currentRoom(self):
-        return self.currentEvent
-
-    def currentState(self):
-        return self.currentState
-
     def getDecision(self):
         if self.currentEvent == 0:
             return self.king
@@ -146,4 +136,13 @@ class Plot(object):
                     self = Plot()
         # print(self.currentText())
 
+
+    def currentText(self):
+        return text.getText(self.currentEvent, self.currentState, self.getDecision())
+
+    def currentRoom(self):
+        return self.currentEvent
+
+    def currentState(self):
+        return self.currentState
 
