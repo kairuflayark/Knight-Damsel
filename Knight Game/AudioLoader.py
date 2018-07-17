@@ -1,6 +1,6 @@
 import pygame
 import time
-
+pygame.init()
 pygame.mixer.init()#FIX MUSIC != MIXER
 
 adventure = pygame.mixer.Sound("Assets/Sounds/adventure.ogg")
@@ -54,9 +54,14 @@ def loadMusic(path):
 def playMusic(playSong):
     global songs
     if playSong in songs:
-            playSong.play()
+            playSong.play(-1)
 
-playSong = songs[0]
+def stopMusic():
+    for i in range(len(songs)):
+        pygame.mixer.Sound.stop(songs[i])
+
+
+playSong = songs[3]
 playMusic(playSong)
 # adventure = pygame.mixer.Sound("Assets/Sounds/adventure.ogg")
 # dungeon_boss = pygame.mixer.Sound("Assets/Sounds/dungeon_boss.ogg")
@@ -66,7 +71,3 @@ playMusic(playSong)
 # soft_battle = pygame.mixer.Sound("Assets/Sounds/soft_battle.ogg")
 
 # adventure.play(-1)
-
-time.sleep(30)
-
-pygame.quit()
