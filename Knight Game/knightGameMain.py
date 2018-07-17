@@ -24,8 +24,9 @@ Plot = Events.Plot()
 Graphics.init(screenRez)
 run = True
 
-#Graphics.add("Assets/nobbynobs.png") #//player sprite
-#player = Entities.Player()
+player = Entities.Player()
+Graphics.add(player) #//player sprite
+
 
 def quit(e):
     global run
